@@ -1,5 +1,13 @@
+"""
+    Finds the length of the longest substring without repeating characters.
+    
+    Logic:
+    1. Use a 'char_map' to store the index of the last time we saw a character.
+    2. 'left' marks the start of the current valid (unique) window.
+    3. If we see a character again, we move 'left' to skip the old occurrence.
+"""
+
 # input - "abcabcbb"
 # output - 3
 
 def largest_unique(str):
-    

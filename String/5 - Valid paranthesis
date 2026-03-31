@@ -1,0 +1,27 @@
+# Valid Paranthesis
+# input: "()[]{}"
+# output: True
+
+
+def is_valid(str1):
+    stack = []
+    map = {
+        '}': '{',
+        ')': '(',
+        ']': '['
+    }
+
+    for ch in str1:
+        if ch in '{[(':
+            stack.append(ch)
+        elif stack == []:
+            return False
+        elif stack[-1] != map[ch]:
+            return False
+        else: 
+            stack.pop()
+    
+    return len(stack) == 0
+
+print(is_valid("()[]{"))             #False
+

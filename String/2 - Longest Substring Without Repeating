@@ -9,5 +9,20 @@
 
 # input - "abcabcbb"
 # output - 3
+# sliding window concept has been used
 
-def largest_unique(str):
+def longest_unique(str):
+    charSet = set()
+    l =0
+    res =0
+
+    for r in range(len(str)):
+        while str[r] in charSet:
+           charSet.remove(str[l])
+           l += 1
+        charSet.add()
+
+        res = max(res, r-l+1)
+    return res
+
+print(longest_unique("abcabcbb"))       # output  = 3

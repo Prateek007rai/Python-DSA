@@ -1,0 +1,15 @@
+# longest common prefix
+# input: ["flower", "flow", "flight"]
+# output: "fl"
+
+def longest_prefix(arr):
+    prefix = arr[0]
+      
+    for word in arr[1: ]:
+        # It returns 0 if word starts with prefix
+        while word.find(prefix) != 0:
+            prefix = prefix[:-1]                        #till then trim it from last
+    
+    return prefix
+       
+print(longest_prefix(["flower", "flow", "flight"]))

@@ -11,6 +11,7 @@
 # output - 3
 # sliding window concept has been used
 
+
 def longest_unique(str):
     charSet = set()
     l =0

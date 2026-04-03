@@ -1,4 +1,4 @@
-# 🐍 Python Deep Guide — From Basics to Mastery
+# 🐍 Python Deep Guide
 
 > (https://preview--pk-dsa.lovable.app/)
 

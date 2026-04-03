@@ -1,7 +1,7 @@
 # 🐍 Python Deep Guide
 
 > (https://preview--pk-dsa.lovable.app/)
-
+> (https://preview--pk-dsa-visuals.lovable.app/)
 ---
 
 ## 📌 Table of Contents

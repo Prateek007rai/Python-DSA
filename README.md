@@ -1,6 +1,6 @@
 # 🐍 Python Deep Guide — From Basics to Mastery
 
-> A comprehensive reference covering Python's core data structures, string/array/list operations, slicing, type conversions, and built-in methods — with real examples.
+> (https://preview--pk-dsa.lovable.app/)
 
 ---
 

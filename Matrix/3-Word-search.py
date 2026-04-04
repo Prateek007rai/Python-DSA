@@ -25,15 +25,17 @@ def spiral_traverse(arr):
             res.append(arr[i][right])
         right -= 1
         
-        # visit bottom
-        for i in range(right, left -1, -1):
-            res.append(arr[bottom][i])
-        bottom -= 1
+        # visit bottom and check condition (to avoid duplicacy through revisit)
+        if top <= bottom:
+            for i in range(right, left -1, -1):
+                res.append(arr[bottom][i])
+            bottom -= 1
         
-        # visit left
-        for i in range(bottom, top-1, -1):
-            res.append(arr[i][left])
-        left += 1
+        # visit left and check condition (so that no duplicacy will come)
+        if left <= right:
+            for i in range(bottom, top-1, -1):
+                res.append(arr[i][left])
+            left += 1
         
         
     return res

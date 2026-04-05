@@ -2,3 +2,5 @@
 # i/p - "babad"
 # o/p - "bab"
 
+
+print()

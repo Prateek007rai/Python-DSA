@@ -6,7 +6,7 @@ def longest_palindrome(s):
     res = ""
 
     for i in range(len(s)):
-        # handles both case: for even (i, i), and for odd(i, i+1)
+        # handles both case: for odd (i, i), and for even (i, i+1), ex - "NOON", "RADAR"
         for l,r in [(i, i), (i, i+1)]:
             while l >= 0 and r < len(s) and s[l] == s[r]:
                 if (r-l+1) > len(res):

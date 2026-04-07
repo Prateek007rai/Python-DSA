@@ -730,4 +730,124 @@ set([1,2,2,3])  # list  → set (removes dupes)
 
 ---
 
+## 15. Searching & Sorting Algorithms
+```python
+# ── SEARCHING ──────────────────────────────────────────────────────────────
+
+# Linear Search — O(n) time | O(1) space | N/A (not a sort)
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+# Binary Search — O(log n) time | O(1) space | N/A (requires sorted input)
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+# ── SORTING ────────────────────────────────────────────────────────────────
+
+# Bubble Sort — O(n²) time | O(1) space | Stable ✅
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+# Selection Sort — O(n²) time | O(1) space | Not Stable ❌
+def selection_sort(arr):
+    for i in range(len(arr)):
+        min_idx = i
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
+
+# Insertion Sort — O(n²) time | O(1) space | Stable ✅
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    return arr
+
+# Merge Sort — O(n log n) time | O(n) space | Stable ✅
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i]); i += 1
+        else:
+            result.append(right[j]); j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+
+# Quick Sort — O(n log n) avg / O(n²) worst time | O(log n) space | Not Stable ❌
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left  = [x for x in arr if x < pivot]
+    mid   = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quick_sort(left) + mid + quick_sort(right)
+
+# Heap Sort — O(n log n) time | O(1) space | Not Stable ❌
+def heap_sort(arr):
+    def heapify(arr, n, i):
+        largest = i
+        l, r = 2 * i + 1, 2 * i + 2
+        if l < n and arr[l] > arr[largest]: largest = l
+        if r < n and arr[r] > arr[largest]: largest = r
+        if largest != i:
+            arr[i], arr[largest] = arr[largest], arr[i]
+            heapify(arr, n, largest)
+    n = len(arr)
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+    for i in range(n - 1, 0, -1):
+        arr[0], arr[i] = arr[i], arr[0]
+        heapify(arr, i, 0)
+    return arr
+
+# Tim Sort — O(n log n) time | O(n) space | Stable ✅  ← Python's built-in
+arr = [5, 2, 8, 1, 9]
+sorted_arr = sorted(arr)        # returns new list
+arr.sort()                      # sorts in-place
+```
+
+| Algorithm      | Best       | Average    | Worst      | Space    | Stable |
+|---------------|------------|------------|------------|----------|--------|
+| Linear Search | O(1)       | O(n)       | O(n)       | O(1)     | —      |
+| Binary Search | O(1)       | O(log n)   | O(log n)   | O(1)     | —      |
+| Bubble Sort   | O(n)       | O(n²)      | O(n²)      | O(1)     | ✅ Yes |
+| Selection Sort| O(n²)      | O(n²)      | O(n²)      | O(1)     | ❌ No  |
+| Insertion Sort| O(n)       | O(n²)      | O(n²)      | O(1)     | ✅ Yes |
+| Merge Sort    | O(n log n) | O(n log n) | O(n log n) | O(n)     | ✅ Yes |
+| Quick Sort    | O(n log n) | O(n log n) | O(n²)      | O(log n) | ❌ No  |
+| Heap Sort     | O(n log n) | O(n log n) | O(n log n) | O(1)     | ❌ No  |
+| Tim Sort      | O(n)       | O(n log n) | O(n log n) | O(n)     | ✅ Yes |
+
 *Made with ❤️ for Python learners. Happy coding!* 🐍

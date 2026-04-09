@@ -1,4 +1,5 @@
 # merge intervals
+# i/p: intervals arr = [[1, 3], [2, 6], [8, 16], [15, 18]]
 
 def merge_intervals(intervals):
     n = len(intervals)

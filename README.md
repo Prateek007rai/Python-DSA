@@ -1,6 +1,6 @@
 # 🐍 Python Deep Guide - Basics
 
-> Check this - (https://preview--pk-dsa.lovable.app/)
+> (https://preview--pk-dsa.lovable.app/)
 ---
 
 ## 📌 Table of Contents

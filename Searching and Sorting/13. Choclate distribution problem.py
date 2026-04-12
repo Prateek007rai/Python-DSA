@@ -3,6 +3,8 @@
 # o/p: 2
 
 def choclate_dist(arr, m):
+    if m == 0 or len(arr) == 0:
+       return 0
     arr.sort()
     res = float('inf')
 

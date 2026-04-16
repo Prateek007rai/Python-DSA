@@ -13,7 +13,7 @@ def pair_sum(arr, target):
 
         if diff in mp:
             for j in range(mp[diff]):
-                print(diff, arr[i])
+                print(diff, arr[i])           #it is print, not return
         
         if arr[i] in mp:
             mp[arr[i]] += 1

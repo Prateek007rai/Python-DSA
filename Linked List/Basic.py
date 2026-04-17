@@ -1,4 +1,6 @@
-# Create a node in py and travere it
+# Time: O(n) | Space: O(1)
+# Input: Node1(1) -> Node2(2) -> Node3(3)
+# Output: 1 -> 2 -> 3 -> None
 
 
 class LinkedList: 

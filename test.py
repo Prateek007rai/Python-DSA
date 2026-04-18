@@ -31,3 +31,10 @@ def compress(str1):
     return res
 
 print(compress("aaaaaa"))
+
+
+# reverse a string
+def rev_str(s):
+    return s[::-1]
+
+print("Reverse a string -> ", rev_str("Prateek"))

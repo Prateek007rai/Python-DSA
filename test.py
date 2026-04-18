@@ -37,4 +37,12 @@ print(compress("aaaaaa"))
 def rev_str(s):
     return s[::-1]
 
-print("Reverse a string -> ", rev_str("Prateek"))
+def rev_string(s):
+    res = ""
+
+    for ch in s:
+       res = ch + res
+
+    return res
+
+print("Reverse a string -> ", rev_string("Prateek"))

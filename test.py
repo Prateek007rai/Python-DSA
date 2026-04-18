@@ -46,3 +46,36 @@ def rev_string(s):
     return res
 
 print("Reverse a string -> ", rev_string("Prateek"))
+
+
+# spiral matrix
+def spiral(arr):
+    top, bottom = 0, len(arr) - 1
+    left, right = 0, len(arr[0]) - 1
+    res = []
+
+    while top <= bottom and left <= right:
+        # print top row
+        for i in range(left, right+1):
+            res.append(arr[top][i])
+        top += 1
+
+        # print right col
+        for i in range(top, bottom + 1):
+            res.append(arr[i][right])
+        right -= 1
+
+        # print bottom row
+        for i in range(right, left - 1, -1):
+            res.append(arr[bottom][i])
+        bottom -= 1
+
+        # print left col
+        for i in range(bottom, top-1, -1):
+            res.append(arr[i][left])
+        left += 1
+          
+    return res
+
+
+print(spiral([[1,2,3], [4,5,6], [7,8,9]]))

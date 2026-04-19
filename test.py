@@ -79,3 +79,20 @@ def spiral(arr):
 
 
 print(spiral([[1,2,3], [4,5,6], [7,8,9]]))
+
+
+# transpose matrix
+def transpose(arr):
+    rows = len(arr)
+    cols = len(arr[0])
+    res = []
+
+    for i in range(cols):
+        temp = []
+        for j in range(rows):
+            temp.append(arr[j][i])
+        res.append(temp)
+    
+    return res
+    
+print("Transpose of matrix: ", transpose([[1,2], [3,4], [5,6]]))

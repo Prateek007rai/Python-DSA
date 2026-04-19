@@ -5,3 +5,22 @@
 
 # Output:
 # A completely new set of memory addresses for nodes 1, 2, 3 with the exact same value and pointer relationships as the input.
+
+def clone_LL(head):
+    if not head: 
+        return None
+
+    mp={}
+    curr = head
+
+    while curr:
+        mp[curr] = ListNode(curr.val)
+        curr = curr.next
+
+    curr = head
+    while curr:
+        mp[curr].next = mp.get(curr.next)
+        mp[curr].random = mp.get(curr.random)
+        curr = curr.next
+    
+    return mp[head]

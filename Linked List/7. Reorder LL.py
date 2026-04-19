@@ -35,6 +35,5 @@ def reorder(head):
 
         first = temp1
         second = temp2
-          
         
     

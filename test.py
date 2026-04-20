@@ -170,3 +170,11 @@ class MyQueue:
         """Returns whether the queue is empty."""
         # The queue is empty only if both stacks have no elements
         return not self.s1 and not self.s2
+    
+# Valid paranthesis
+def is_valid(s: str) -> bool:
+    
+# Test Cases
+print("Vaild Parantesis: ", is_valid("()[]{}")) # True
+print("Vaild Parantesis: ", is_valid("([)]"))   # False
+print("Vaild Parantesis: ", is_valid("{[]}"))   # True

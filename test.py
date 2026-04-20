@@ -174,7 +174,7 @@ class MyQueue:
 # Valid paranthesis
 def is_valid(s: str) -> bool:
     
-# Test Cases
+
 print("Vaild Parantesis: ", is_valid("()[]{}")) # True
 print("Vaild Parantesis: ", is_valid("([)]"))   # False
 print("Vaild Parantesis: ", is_valid("{[]}"))   # True

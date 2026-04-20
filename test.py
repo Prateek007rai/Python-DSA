@@ -137,27 +137,23 @@ print(count_word_frequency(text))
 
 
 # Implement queue using stacks
-class MyQueue {
-  constructor() {
-    this.s1 = [];
-    this.s2 = [];
-  }
+class MyQueue:
+    def __init__(self):
+        self.s1 = []
+        self.s2 = []
 
-  push(x) {
-    this.s1.push(x);
-  }
+    def push(self, x: int) -> None:
+        self.s1.append(x)
 
-  pop() {
-    this.peek(); // Ensure s2 has the oldest elements
-    return this.s2.pop();
-  }
+    def pop(self) -> int:
+        self.peek() # Ensure s2 has the oldest elements
+        return self.s2.pop()
 
-  peek() {
-    if (this.s2.length === 0) {
-      while (this.s1.length > 0) {
-        this.s2.push(this.s1.pop());
-      }
-    }
-    return this.s2[this.s2.length - 1];
-  }
-}
+    def peek(self) -> int:
+        if not self.s2:
+            while self.s1:
+                self.s2.append(self.s1.pop())
+        return self.s2[-1]
+
+    def empty(self) -> bool:
+        return not self.s1 and not self.s2

@@ -139,21 +139,34 @@ print(count_word_frequency(text))
 # Implement queue using stacks
 class MyQueue:
     def __init__(self):
+        # s1 acts as the "Input Stack" for new elements
+        # s2 acts as the "Output Stack" for extracting elements in FIFO order
         self.s1 = []
         self.s2 = []
 
     def push(self, x: int) -> None:
+        """Push element x to the back of queue."""
         self.s1.append(x)
 
     def pop(self) -> int:
-        self.peek() # Ensure s2 has the oldest elements
+        """Removes the element from in front of queue and returns that element."""
+        # Ensure s2 is populated by calling peek()
+        self.peek() 
         return self.s2.pop()
 
     def peek(self) -> int:
+        """Get the front element."""
+        # Only transfer elements if the output stack (s2) is empty
         if not self.s2:
+            # Transfer all elements from s1 to s2
+            # This effectively reverses the order (LIFO -> FIFO)
             while self.s1:
                 self.s2.append(self.s1.pop())
+        
+        # Return the top of the output stack
         return self.s2[-1]
 
     def empty(self) -> bool:
+        """Returns whether the queue is empty."""
+        # The queue is empty only if both stacks have no elements
         return not self.s1 and not self.s2

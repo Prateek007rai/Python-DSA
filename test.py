@@ -118,3 +118,18 @@ def long_sub(s):
     return max_len
 
 print("Longest substring without repeating char: ", long_sub("abcabcbb"))
+
+# Count word freeq in a sentence
+def count_word_frequency(sentence):
+    # Convert to lowercase and split by whitespace
+    words = sentence.lower().split()
+    
+    frequency = {}
+    for word in words:
+        # If word exists, increment; otherwise, set to 1
+        frequency[word] = frequency.get(word, 0) + 1
+        
+    return frequency
+
+text = "The quick brown fox jumps over the lazy dog the fox"
+print(count_word_frequency(text))

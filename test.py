@@ -212,4 +212,18 @@ def word_search_in_matrix(arr, word):
 
 print("Word search in arrray", word_search_in_matrix([['A','B','C'], ['D','E','F'], ['G','H','I']],"ABCFEDGHI"))
 
+
 # return first non repetitive char from string
+def first_non_rep_char(sent):
+    counter = {}
+    
+    for ch in sent.lower():
+        counter[ch] = counter.get(ch, 0) + 1
+    
+    for i in counter:
+        if counter[i] == 1:
+            return i
+    
+    return "No unique char is present"
+
+print("First non repetitive char: ", first_non_rep_char("Kasjkasij"))

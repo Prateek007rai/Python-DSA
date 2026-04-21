@@ -171,10 +171,45 @@ class MyQueue:
         # The queue is empty only if both stacks have no elements
         return not self.s1 and not self.s2
     
-# Valid paranthesis
-def is_valid(s: str) -> bool:
     
+# word search
+def word_search_in_matrix(arr, word):
+    rows = len(arr)
+    cols = len(arr[0])
 
-print("Vaild Parantesis: ", is_valid("()[]{}")) # True
-print("Vaild Parantesis: ", is_valid("([)]"))   # False
-print("Vaild Parantesis: ", is_valid("{[]}"))   # True
+    # dfs for traversing the matrix
+    def dfs(r, c, i):
+        if i == len(word):
+            return True
+        if r < 0 or c < 0 or r >= rows or c >= cols:
+            return False
+        if arr[r][c] != word[i]:
+            return False
+        
+        # now it will match (consider)
+        temp = arr[r][c]
+        arr[r][c] = '#'               #mark as visited
+
+        found = (
+            dfs(r+1, c, i+1) or
+            dfs(r-1, c, i+1) or
+            dfs(r, c+1, i+1) or
+            dfs(r, c-1, i+1)
+        )
+
+        arr[r][c] = temp
+
+        return found
+    # dfs dunction ends here
+
+    for i in range(rows):
+        for j in range(cols):
+            if dfs(i,j,0):
+                return True
+    
+    return False
+
+
+print("Word search in arrray", word_search_in_matrix([['A','B','C'], ['D','E','F'], ['G','H','I']],"ABCFEDGHI"))
+
+# return first non repetitive char from string

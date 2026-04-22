@@ -230,7 +230,6 @@ print("First non repetitive char: ", first_non_rep_char("Kasjkasbj"))
 
 
 # find elements that appears more than n/2 times:
-
 def ele_more_than_nBytwo(arr):
     element = None
     count = 0
@@ -243,8 +242,20 @@ def ele_more_than_nBytwo(arr):
             count += 1
         else:
             count -= 1
-            
+
     return element
 
 print("ELemnet appears more than n/2 times: ", ele_more_than_nBytwo([3,2,3]))
 
+
+# Longest common prefix
+def longest_common_prefix(arr):
+    prefix = arr[0]
+
+    for word in arr:
+        while word.find(prefix) != 0:
+            prefix = prefix[:-1]
+
+    return prefix
+
+print("Longest common prefix: ", longest_common_prefix(['flower', 'flow', 'flown', 'floor', 'fast']))

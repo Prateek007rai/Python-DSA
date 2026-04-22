@@ -229,4 +229,22 @@ def first_non_rep_char(sent):
 print("First non repetitive char: ", first_non_rep_char("Kasjkasbj"))
 
 
+# find elements that appears more than n/2 times:
+
+def ele_more_than_nBytwo(arr):
+    element = None
+    count = 0
+
+    for num in arr:
+        if count == 0:
+            element = num
+        
+        if element == num:
+            count += 1
+        else:
+            count -= 1
+            
+    return element
+
+print("ELemnet appears more than n/2 times: ", ele_more_than_nBytwo([3,2,3]))
 

@@ -226,4 +226,7 @@ def first_non_rep_char(sent):
     
     return "No unique char is present"
 
-print("First non repetitive char: ", first_non_rep_char("Kasjkasij"))
+print("First non repetitive char: ", first_non_rep_char("Kasjkasbj"))
+
+
+

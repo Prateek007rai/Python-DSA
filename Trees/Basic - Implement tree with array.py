@@ -18,3 +18,16 @@ class SimpleTree:
         if right_idx < len(self.tree):
             return self.tree[right_idx]
         return None
+    
+# --- Main Logic ---
+my_tree = SimpleTree()
+
+my_tree.insert_at(0, 10)  # Root
+my_tree.insert_at(1, 5)   # Left of 10
+my_tree.insert_at(2, 15)  # Right of 10
+my_tree.insert_at(3, 2)   # Left of 5
+
+print("Array View:", my_tree.tree)
+print("Root:", my_tree.tree[0])
+print("Left Child of 10:", my_tree.get_left_child(0))
+print("Right Child of 10:", my_tree.get_right_child(0))

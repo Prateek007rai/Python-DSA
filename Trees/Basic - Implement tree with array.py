@@ -19,6 +19,9 @@ class SimpleTree:
             return self.tree[right_idx]
         return None
     
+    def get_tree(self):
+        return self.tree
+    
 # --- Main Logic ---
 my_tree = SimpleTree()
 
@@ -31,3 +34,5 @@ print("Array View:", my_tree.tree)
 print("Root:", my_tree.tree[0])
 print("Left Child of 10:", my_tree.get_left_child(0))
 print("Right Child of 10:", my_tree.get_right_child(0))
+
+print("Whole tree: ", my_tree.get_tree())

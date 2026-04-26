@@ -259,3 +259,26 @@ def longest_common_prefix(arr):
     return prefix
 
 print("Longest common prefix: ", longest_common_prefix(['flower', 'flow', 'flown', 'floor', 'fast']))
+
+
+# Valid paranthesis
+def is_valid_paranthesis(s):
+    stack = []
+    mp = {
+        ')': '(',
+        '}': '{',
+        ']': '['
+    }
+
+    for ch in s:
+        if ch in mp:
+            if not stack or stack[-1] != mp[ch]:
+                return False
+            stack.pop()
+        else:
+            stack.append(ch)
+    return len(stack) == 0
+
+print("Check is valid paranthesis: ", is_valid_paranthesis("()[]{}"))
+print("Check is valid paranthesis: ", is_valid_paranthesis("()(()"))
+

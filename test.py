@@ -282,3 +282,28 @@ def is_valid_paranthesis(s):
 print("Check is valid paranthesis: ", is_valid_paranthesis("()[]{}"))
 print("Check is valid paranthesis: ", is_valid_paranthesis("()(()"))
 
+
+# Longest char repeating replacement
+def long_ch_repeat_replace(s, k):
+    l = 0
+    res = 0
+    max_freq = 0
+    count = {}
+
+    for r in range(len(s)):
+        count[s[r]] = count.get(s[r], 0) + 1
+        max_freq = max(max_freq, count[s[r]])
+
+        while (r-l+1) - max_freq > k:
+            count[s[l]] -= 1
+            l += 1
+        
+        res = max(res, r-l+1)
+    
+    return res
+
+print("Check for longest char replacement: ", long_ch_repeat_replace("AABABBB", 1))
+
+# print all anagrams together
+
+

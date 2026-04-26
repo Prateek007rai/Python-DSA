@@ -305,5 +305,17 @@ def long_ch_repeat_replace(s, k):
 print("Check for longest char replacement: ", long_ch_repeat_replace("AABABBB", 1))
 
 # print all anagrams together
+def anagrams_together(arr):
+    keys = {}
 
+    for word in arr:
+        wordVal = "".join(sorted(word))
+
+        if wordVal not in keys:
+            keys[wordVal] = []
+        keys[wordVal].append(word)
+    
+    return list(keys.values())
+
+print("Anagram collection: ", anagrams_together(["ate", "eat", "cat", "tac", "sat"]))       
 

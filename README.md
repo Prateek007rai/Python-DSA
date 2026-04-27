@@ -850,3 +850,4 @@ arr.sort()                      # sorts in-place
 | Heap Sort     | O(n log n) | O(n log n) | O(n log n) | O(1)     | ❌ No  |
 | Tim Sort      | O(n)       | O(n log n) | O(n log n) | O(n)     | ✅ Yes |
 
+*Made with ❤️ for Python learners. Happy coding!* 

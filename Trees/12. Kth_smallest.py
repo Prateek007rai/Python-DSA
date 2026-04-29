@@ -1,5 +1,6 @@
 # Time: O(n), Space: O(h)
 
+
 def kth_smallest(root, k):
     stack = []
 
@@ -15,4 +16,3 @@ def kth_smallest(root, k):
             return root.val
         
         root  = root.right
-        

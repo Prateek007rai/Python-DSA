@@ -12,5 +12,6 @@ class Trie:
     def insert(self, word):
         node = self.root
 
-        for ch in word 
+        for ch in word:
+            if
 

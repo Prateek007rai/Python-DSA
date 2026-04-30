@@ -17,3 +17,4 @@ def kth_largest(arr,k):
     
     return heap[0]
 
+print(kth_largest([17, 20, 9, 11, 35, 44, 29], 5))        #17

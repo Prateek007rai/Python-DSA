@@ -3,6 +3,7 @@
 # i/p: [linked_list_0, linked_list_1,linked_list_2]  
 # o/p: [single linked list]
 
+
 import heapq
 
 def merge_k_sorted_lls(lists):
@@ -17,7 +18,7 @@ def merge_k_sorted_lls(lists):
 
     while heap:
         val, i ,node = heapq.heappop(heap)
-        
+
         curr.next = node
         curr = curr.next
 

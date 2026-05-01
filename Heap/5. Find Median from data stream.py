@@ -35,3 +35,30 @@ class MedianFind:
             return -1 * self.small[0]
         return (-1*self.small[0] + self.large[0]) / 2
     
+
+
+
+
+
+
+
+
+
+    # Initialize the object
+finder = MedianFind()
+
+# Test Case 1: First number
+finder.addNum(5)
+print(f"Added 5, Median: {finder.findMedian()}") # Expected: 5
+
+# Test Case 2: Even number of elements
+finder.addNum(15)
+print(f"Added 15, Median: {finder.findMedian()}") # Expected: (5+15)/2 = 10.0
+
+# Test Case 3: Odd number of elements
+finder.addNum(1)
+print(f"Added 1, Median: {finder.findMedian()}") # Expected: 5
+
+# Test Case 4: Even number again
+finder.addNum(3)
+print(f"Added 3, Median: {finder.findMedian()}") # Expected: (3+5)/2 = 4.0

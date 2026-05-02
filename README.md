@@ -24,7 +24,7 @@
 
 ---
 
-## 1. Variables 
+## 1. Variables & Data Types
 
 ```python
 # Integer

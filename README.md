@@ -5,7 +5,7 @@
 ---
 
 
-## 📌 Table 
+## 📌 Table of Contents
 
 1. [Variables & Data Types](#1-variables--data-types)
 2. [Strings & String Methods](#2-strings--string-methods)

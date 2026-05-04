@@ -319,3 +319,6 @@ def anagrams_together(arr):
 
 print("Anagram collection: ", anagrams_together(["ate", "eat", "cat", "tac", "sat"]))       
 
+
+
+# Count Palindrome subString

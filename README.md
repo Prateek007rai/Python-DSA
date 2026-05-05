@@ -1,4 +1,4 @@
-# 🐍 Python Deep Guide - Basics
+# 🐍 Python Deep 
 
 > Data structures - https://preview--pk-dsa.lovable.app/
 > Database - https://pk-db.lovable.app/

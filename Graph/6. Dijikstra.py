@@ -33,3 +33,5 @@ def dijikstra(n,edges,src):
 
     return dist
 
+
+print(dijikstra(4, [(0,1,4), (0,2,1), (2,1,2), (1,3,1), (2,3,5)],0))

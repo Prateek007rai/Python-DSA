@@ -8,19 +8,7 @@
 ## 📌 Table of Contents
 
 1. [Variables & Data Types](#1-variables--data-types)
-2. [Strings & String Methods](#2-strings--string-methods)
-3. [Type Conversion](#3-type-conversion)
-4. [Lists & List Methods](#4-lists--list-methods)
-5. [Tuples & Tuple Methods](#5-tuples--tuple-methods)
-6. [Sets & Set Methods](#6-sets--set-methods)
-7. [Dictionaries & Dict Methods](#7-dictionaries--dict-methods)
-8. [List vs Tuple vs Set vs Dict — Comparison](#8-list-vs-tuple-vs-set-vs-dict--comparison)
-9. [Slicing — Strings, Lists & Arrays](#9-slicing--strings-lists--arrays)
-10. [Arrays (via `array` module)](#10-arrays-via-array-module)
-11. [Loops & Iteration](#11-loops--iteration)
-12. [Comprehensions](#12-comprehensions)
-13. [Functions — Basics to Advanced](#13-functions--basics-to-advanced)
-14. [Quick Cheat Sheet](#14-quick-cheat-sheet)
+
 
 ---
 

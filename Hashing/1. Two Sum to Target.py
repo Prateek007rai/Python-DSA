@@ -14,4 +14,3 @@ def two_sum(nums, target):
             return [mp[diff], i]                  #bcz mp has { 2: 0, 7: 1, 11: 2, 15: 3}
         mp[nums[i]] = i
 
-print(two_sum([2,7,11,15], 9))

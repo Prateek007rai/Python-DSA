@@ -1,6 +1,4 @@
-# Sum to target
-# i/p: [2,7,11,15], k = 9
-# o/p: [0,1]
+
 
 # Time: O(n), Space: O(n)
 

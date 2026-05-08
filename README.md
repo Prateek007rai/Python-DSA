@@ -27,7 +27,14 @@
 ## 1. Variables & Data Types
 
 ```python
+# Integer
+age = 25
 
+# Float
+pi = 3.14159
+
+# String
+name = "Python"
 
 # Boolean
 is_active = True

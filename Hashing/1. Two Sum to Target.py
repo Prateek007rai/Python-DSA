@@ -15,3 +15,4 @@ def two_sum(nums, target):
         mp[nums[i]] = i
 
 
+print(two_sum([2,7,11,15], 9))

@@ -25,3 +25,11 @@ root.left = TreeNode(5)
 root.right = TreeNode(15)
 root.left.left = TreeNode(2)
 
+# Structure:
+#      10
+#     /  \
+#    5   15
+#   /
+#  2
+
+print(f"Height: {height_tree(root)}")  # Expected: 3

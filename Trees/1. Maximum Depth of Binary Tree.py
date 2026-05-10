@@ -2,11 +2,7 @@
 # TIme: O(n), Space: O(n)
 
 
-class TreeNode:
-    def __init__(self, val):
-        self.val = val
-        self.left = None
-        self.right = None
+
 
 def height_tree(root):
     # Base condition

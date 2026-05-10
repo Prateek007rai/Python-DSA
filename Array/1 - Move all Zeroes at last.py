@@ -1,3 +1,4 @@
+# Time: O(n)
 
 def move_zeroes(arr):
     j=0

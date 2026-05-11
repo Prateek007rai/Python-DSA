@@ -9,3 +9,5 @@ def count_palindrome_substring(s):
                 l -= 1
                 r += 1
     return count
+
+print(count_palindrome_substring("aaa")) 

@@ -14,4 +14,3 @@ def product_arr_except_self(arr):
     return res
     
 print(product_arr_except_self([1,2,3,4]))
-            

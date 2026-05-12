@@ -1,6 +1,7 @@
 # Find shortest path distance from source to all nodes (also deals with -ve values)
 # Time: O(V * E), Space: O(V)
 # i/p: n = 5, edges = [(0,1,-1), (0,2,4), (1,2,3), (1,3,2), (1,4,2), (3,2,5), (3,1,1),(4,3,-3)], src = 0
+# o/p: [0,-1,2,-2,1] 
 
 def bellman_fords(n, edges, src):
     dist = [float('inf')] * n

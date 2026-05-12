@@ -8,7 +8,8 @@
 
 
 def clone_LL(head):
-   
+    if not head: 
+        return None
 
     mp={}
     curr = head

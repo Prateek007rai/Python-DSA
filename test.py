@@ -351,3 +351,14 @@ def buy_sell(arr):
     return max_profit
 
 print(buy_sell([7,1,6,4,3]))
+
+# 3. Move Zeroes to the end
+def move_zeroes(arr):
+    j=0
+    for i in range(len(arr)):
+        if arr[i] != 0:
+            arr[i], arr[j] = arr[j], arr[i]
+            j += 1
+    return arr
+
+print(move_zeroes([1,0,0,2,0,3,0,4,5,6,0,0,0,7]))

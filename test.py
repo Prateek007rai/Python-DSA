@@ -336,3 +336,18 @@ def pair_sum(arr, target):
     return False
 
 print(pair_sum([4,6,7,8,9], 14))
+
+# 2. Buy and sell stock problem
+def buy_sell(arr):
+    max_profit = 0
+    min_price = arr[0]
+
+    for price in arr:
+        min_price = min(price, min_price)
+
+        profit = price - min_price
+
+        max_profit = max(profit, max_profit)
+    return max_profit
+
+print(buy_sell([7,1,6,4,3]))

@@ -362,3 +362,22 @@ def move_zeroes(arr):
     return arr
 
 print(move_zeroes([1,0,0,2,0,3,0,4,5,6,0,0,0,7]))
+
+
+# 4. Product of arr itself
+def product_arr_self(arr):
+    res = [1] * len(arr)
+
+    left_product = 1
+    for i in range(len(arr)):
+        res[i] = left_product
+        left_product = left_product * arr[i]
+ 
+    right_product = 1
+    for i in range(len(arr)-1, -1, -1):
+        res[i] = res[i] * right_product
+        right_product = right_product * arr[i]
+
+    return res
+
+print(product_arr_self([1,2,3,4]))

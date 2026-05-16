@@ -4,7 +4,6 @@
 > Database - https://pk-db.lovable.app/
 ---
 
-
 ## 📌 Table of Contents
 
 1. [Variables & Data Types](#1-variables--data-types)

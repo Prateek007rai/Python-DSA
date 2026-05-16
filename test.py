@@ -321,4 +321,18 @@ print("Anagram collection: ", anagrams_together(["ate", "eat", "cat", "tac", "sa
 
 
 
-# Count Palindrome subString
+# START A NEW DAY WITH A NEW THOUGHT
+
+# 1. find pair of sum
+def pair_sum(arr, target):
+    seen = set()
+
+    for num in arr:
+        x = target - num
+        if x in seen:
+            return x, num
+        seen.add(num)
+
+    return False
+
+print(pair_sum([4,6,7,8,9], 14))

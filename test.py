@@ -381,3 +381,16 @@ def product_arr_self(arr):
     return res
 
 print(product_arr_self([1,2,3,4]))
+
+# Maximum subarray problem
+def max_subarr(arr):
+    curr_sum = arr[0]
+    max_sum = arr[0]
+
+    for num in arr[1:]:
+        curr_sum = max(curr_sum, curr_sum + num)
+        max_sum = max(curr_sum, max_sum)
+    
+    return max_sum
+
+print(max_subarr([-2,1,-3,4,-1,2,1]))

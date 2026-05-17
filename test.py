@@ -424,3 +424,38 @@ def factorial(n):
     return n * factorial(n-1)
 
 print(factorial(5))
+
+# 8. Trapping rain water
+def trap_water(arr):
+    if not arr:
+        return 0
+        
+    left = 0
+    right = len(arr) - 1
+    
+    left_max = arr[left]
+    right_max = arr[right]
+    
+    water_count = 0
+
+    while left < right:
+        if arr[left] <= arr[right]:
+            # If current height is greater than max left wall, update it
+            if arr[left] >= left_max:
+                left_max = arr[left]
+            else:
+                # Otherwise, water is trapped securely by the higher right wall
+                water_count += left_max - arr[left]
+            left += 1
+        else:
+            # If right wall is smaller, track from the right side
+            if arr[right] >= right_max:
+                right_max = arr[right]
+            else:
+                water_count += right_max - arr[right]
+            right -= 1
+            
+    return water_count
+
+print(trap_water([0, 1, 0, 2, 1]))  # Output: 1
+print(trap_water([4, 2, 0, 3, 2, 5]))  # Output: 9

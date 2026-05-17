@@ -475,3 +475,20 @@ def merge_intervals(arr):
     return res
 
 print(merge_intervals([[1,3], [2,6]]))
+
+# 10. Insert merge intervals
+def insert_intervals(arr, new):
+    arr.append(new)
+    arr.sort()
+    res = [arr[0]]
+
+    for i in range(1, len(arr)):
+        last  = res[-1]
+
+        if last[1] < arr[i][0]:
+            res.append(arr[i])
+        else:
+            last[1] = max(last[1], arr[i][1])
+    return res
+
+print(insert_intervals([[1,3],[6,9]], [2,5]))

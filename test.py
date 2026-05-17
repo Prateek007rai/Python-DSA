@@ -459,3 +459,19 @@ def trap_water(arr):
 
 print(trap_water([0, 1, 0, 2, 1]))  # Output: 1
 print(trap_water([4, 2, 0, 3, 2, 5]))  # Output: 9
+
+
+# 9. Merge intervals
+def merge_intervals(arr):
+    arr.sort()
+    res = [arr[0]]
+    
+    for i in range(1, len(arr)):
+        top_ele = res[-1]
+        if top_ele[1] < arr[i][0]:
+            res.append(arr[i])
+        else:
+            top_ele[1] = max(arr[i][1], top_ele[1])
+    return res
+
+print(merge_intervals([[1,3], [2,6]]))

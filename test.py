@@ -494,3 +494,6 @@ def insert_intervals(arr, new):
 print(insert_intervals([[1,3],[6,9]], [2,5]))
 
 # 11. Spiral matrix
+
+# 12. Transpose Matrix
+

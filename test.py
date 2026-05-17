@@ -415,3 +415,12 @@ def max_area(arr):
     return max_area
 
 print(max_area([1,8,6,2,5,4,6,3,7]))
+
+# 7. Factorial
+def factorial(n):
+    if n == 1:
+        return 1
+    
+    return n * factorial(n-1)
+
+print(factorial(5))

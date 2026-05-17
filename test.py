@@ -497,3 +497,4 @@ print(insert_intervals([[1,3],[6,9]], [2,5]))
 
 # 12. Transpose Matrix
 
+# 13. Word search

@@ -495,6 +495,7 @@ print(insert_intervals([[1,3],[6,9]], [2,5]))
 
 # 11. Spiral matrix
 
-# 12. Transpose Matrix
+
+# 12. Transpose matrix
 
 # 13. Word search

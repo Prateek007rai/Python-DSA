@@ -382,7 +382,7 @@ def product_arr_self(arr):
 
 print(product_arr_self([1,2,3,4]))
 
-# Maximum subarray problem
+# 5. Maximum subarray problem
 def max_subarr(arr):
     curr_sum = arr[0]
     max_sum = arr[0]
@@ -394,3 +394,24 @@ def max_subarr(arr):
     return max_sum
 
 print(max_subarr([-2,1,-3,4,-1,2,1]))
+
+# 6. Container with most water problem
+def max_area(arr):
+    left = 0
+    max_area = 0
+    right = len(arr) - 1
+
+    while left < right:
+        width  = right - left
+
+        if arr[left] < arr[right]:
+            height  = arr[left]
+            left += 1
+        else:
+            height  = arr[right]
+            right -= 1
+        max_area = max(max_area, height * width)
+
+    return max_area
+
+print(max_area([1,8,6,2,5,4,6,3,7]))

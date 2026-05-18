@@ -531,5 +531,18 @@ def spiral_matrix(arr):
 print(spiral_matrix([[1,2,3], [4,5,6], [7,8,9]]))
 
 # 12. Transpose matrix
+def transpose_matrix(arr):
+    rows = len(arr)
+    res = []
+
+    for i in range(len(arr[0])):
+        op_arr = []
+        for j in range(rows):
+            op_arr.append(arr[j][i])
+        res.append(op_arr)
+    
+    return res
+
+print(transpose_matrix([[1,2], [3,4], [5,6]]))
 
 # 13. Word search

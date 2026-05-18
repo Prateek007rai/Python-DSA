@@ -494,7 +494,41 @@ def insert_intervals(arr, new):
 print(insert_intervals([[1,3],[6,9]], [2,5]))
 
 # 11. Spiral matrix
+def spiral_matrix(arr):
+    res = []
+    top, left = 0, 0
+    bottom, right = len(arr)-1, len(arr)-1
 
+    if not arr or len(arr) == 0:
+        return None
+    
+    while top <= bottom and left <= right:
+
+        # insert top elements
+        for i in range(left, right+1):
+            res.append(arr[top][i])
+        top += 1
+        
+        # insert right side eles
+        for i in range(top, bottom+1):
+            res.append(arr[i][right])
+        right -= 1
+
+        # insert bottom eles
+        if top <= bottom:
+            for i in range(right, left-1, -1):
+                res.append(arr[bottom][i])
+            bottom -= 1
+
+        # insert left eles
+        if left <= right:
+            for i in range(bottom, top-1, -1):
+                res.append(arr[i][left])
+            left += 1
+    
+    return res
+
+print(spiral_matrix([[1,2,3], [4,5,6], [7,8,9]]))
 
 # 12. Transpose matrix
 

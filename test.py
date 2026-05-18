@@ -546,3 +546,4 @@ def transpose_matrix(arr):
 print(transpose_matrix([[1,2], [3,4], [5,6]]))
 
 # 13. Word search
+def exist(board, word):

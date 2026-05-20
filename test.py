@@ -629,4 +629,15 @@ def print_tri(n):
 
 print(print_tri(3))
 
+# 17. Reverse a number
+def rev_num(num):
+    res = 0
 
+    while num:
+        digit = num % 10
+        res = res*10 + digit
+        num = num // 10
+
+    return res
+
+print(rev_num(1423))

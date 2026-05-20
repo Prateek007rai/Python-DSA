@@ -641,3 +641,16 @@ def rev_num(num):
     return res
 
 print(rev_num(1423))
+
+# 18. Count Vowels in a string
+def count_vowels(s):
+    vowels = 'aeiouAEIOU'
+    count = 0
+
+    for ch in s:
+       if ch in vowels:
+           count += 1
+    
+    return count
+
+print(count_vowels("Prateek"))

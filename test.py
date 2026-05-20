@@ -605,15 +605,28 @@ def print_fib(n):
     elif n == 2:
         print(a,b)
         return
-    print(a, b, " ")
+    print(a, b, end=" ")
     for i in range(2, n):
         num = a + b
         a = b
         b = num
-        print(num, " ")
+        print(num, end=" ")
     
     return 
 
 print(print_fib(8))
 
-# 24. Print triangle pyramid pattern with numbers
+# 16. Print triangle pyramid pattern with numbers
+def print_tri(n):
+    num = 1
+    for i in range(n):
+        print("" * (n-i-1), end= " ")
+        for j in range(i+1):
+            print(num, end= " ")
+            num += 1
+        print()
+    return None
+
+print(print_tri(3))
+
+

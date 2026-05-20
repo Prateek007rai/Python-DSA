@@ -1,4 +1,5 @@
-
+# Time: O(n) | Space: O(n)
+# Input: [1,1,1], K=2 -> Output: 2
 
 def subarray_sum(arr, k):
     count = 0                                       # Total subarrays found

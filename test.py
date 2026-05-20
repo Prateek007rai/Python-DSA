@@ -594,3 +594,26 @@ def check_pal(s):
     return True
 
 print(check_pal('madam'))
+
+# 15. Print Fibonacci Series
+def print_fib(n):
+    a=0
+    b=1
+    if n==1:
+        print(a)
+        return
+    elif n == 2:
+        print(a,b)
+        return
+    print(a, b, " ")
+    for i in range(2, n):
+        num = a + b
+        a = b
+        b = num
+        print(num, " ")
+    
+    return 
+
+print(print_fib(8))
+
+# 24. Print triangle pyramid pattern with numbers

@@ -654,3 +654,5 @@ def count_vowels(s):
     return count
 
 print(count_vowels("Prateek"))
+
+# 19. Check numbers are palindrome

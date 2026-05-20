@@ -17,4 +17,5 @@ def subarray_sum(arr, k):
         mp[prefix] = mp.get(prefix, 0) + 1
         
     return count
-                   # Output: 2
+
+print(subarray_sum([1,1,1], 2))                     # Output: 2

@@ -579,3 +579,18 @@ def exist(board, word):
     return False
 
 print(exist([['A','B','C'], ['D','E','F'], ['G','H','I']], 'ABE'))
+
+
+# 14. Palindrome check
+def check_pal(s):
+    left = 0
+    right = len(s)-1
+
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+print(check_pal('madam'))

@@ -18,4 +18,4 @@ def is_max_heap(arr):
         
     return True
 
-print(is_max_heap([10,5,6,2]))
+

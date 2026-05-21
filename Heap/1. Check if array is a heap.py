@@ -3,7 +3,7 @@
 # o/p: True
 
 def is_max_heap(arr):
-    n = len(arr)
+    
 
     for i in range(len(arr)):
 

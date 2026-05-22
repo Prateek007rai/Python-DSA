@@ -5,8 +5,7 @@
 # o/p: 4->3->2->1
 
 def reverse_list(head):
-    prev = None
-    curr = head
+ 
     
     while curr:
         next = curr.next

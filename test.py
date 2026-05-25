@@ -704,4 +704,26 @@ def check_anagram(str1, str2):
             return False
     
     return True
-print(check_anagram("listen", "sieent"))
+print(check_anagram("listen", "silent"))
+
+
+# 21. Way 2 - Valid anagram
+def check_anagram_counter(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    
+    counter = {}
+    for ch in str1:
+        counter[ch] = counter.get(ch, 0) + 1
+        
+    for ch in str2:
+        if ch not in counter:
+            return False
+        counter[ch] = counter[ch] - 1
+
+        if counter[ch] == 0:
+            del counter[ch]
+    
+    return len(counter) == 0
+
+print(check_anagram_counter("listen", "silent"))

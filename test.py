@@ -715,7 +715,7 @@ def check_anagram_counter(str1, str2):
     counter = {}
     for ch in str1:
         counter[ch] = counter.get(ch, 0) + 1
-        
+
     for ch in str2:
         if ch not in counter:
             return False
@@ -727,3 +727,13 @@ def check_anagram_counter(str1, str2):
     return len(counter) == 0
 
 print(check_anagram_counter("listen", "silent"))
+
+# 22. First Non Repeating Char Index
+def first_unique_char_index(s):
+    counter = {}
+    for ch in s:
+        counter[ch] = counter.get(ch, 0) + 1
+    
+    for 
+
+print(first_unique_char_index("leetcode"))

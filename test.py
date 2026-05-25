@@ -668,7 +668,7 @@ def check_num_isPal(num):
     return res == original
 print(check_num_isPal(121))
 
-# 20. Nth fibnocci number
+# 20. A - Nth fibnocci number using recursion, time complexity = O(2^n)
 def nth_fib(n):
 
     if n <= 1:
@@ -676,4 +676,20 @@ def nth_fib(n):
     
     return nth_fib(n-1) + nth_fib(n-2)
 
-print(nth_fib(6))
+print(nth_fib(10))
+
+# 20. B - iterative approach, time complexity = O(n)
+def nth_fib_iter(n):
+    if n <= 1:
+        return n
+    
+    a,b = 0, 1
+
+    for _ in range(2, n+1):
+        temp  = a + b
+        a = b
+        b = temp
+    
+    return b
+
+print(nth_fib_iter(10))

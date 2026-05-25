@@ -693,3 +693,15 @@ def nth_fib_iter(n):
     return b
 
 print(nth_fib_iter(10))
+
+#  21. Way 1 - Valid Anagram
+def check_anagram(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    
+    for i in range(len(str1)):
+        if str1[i] not in str2 or str2[i] not in str1:
+            return False
+    
+    return True
+print(check_anagram("listen", "sieent"))

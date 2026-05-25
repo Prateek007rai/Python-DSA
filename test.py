@@ -656,3 +656,14 @@ def count_vowels(s):
 print(count_vowels("Prateek"))
 
 # 19. Check numbers are palindrome
+def check_num_isPal(num):
+    res = 0
+    original = num
+
+    while num > 0:
+        digit = num % 10
+        res = res * 10 + digit
+        num = num // 10
+    
+    return res == original
+print(check_num_isPal(121))

@@ -744,5 +744,16 @@ print(first_unique_char_index("leetcode"))
 
 # 23. check armstrong number
 def check_armstrong(num):
+    res = 0
+    original = num
+
+    while num > 0:
+       digit = num % 10
+       res = digit * digit * digit + res
+       num = num // 10
     
+    return original == res
+
 print(check_armstrong(153))
+
+# 24. 

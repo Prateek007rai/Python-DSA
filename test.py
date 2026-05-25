@@ -667,3 +667,13 @@ def check_num_isPal(num):
     
     return res == original
 print(check_num_isPal(121))
+
+# 20. Nth fibnocci number
+def nth_fib(n):
+
+    if n <= 1:
+        return n
+    
+    return nth_fib(n-1) + nth_fib(n-2)
+
+print(nth_fib(6))

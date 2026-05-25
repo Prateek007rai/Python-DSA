@@ -741,3 +741,5 @@ def first_unique_char_index(s):
     return None
 
 print(first_unique_char_index("leetcode"))
+
+# 23. check armstrong number

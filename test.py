@@ -734,6 +734,5 @@ def first_unique_char_index(s):
     for ch in s:
         counter[ch] = counter.get(ch, 0) + 1
     
-    for 
 
 print(first_unique_char_index("leetcode"))

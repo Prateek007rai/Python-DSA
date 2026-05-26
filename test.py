@@ -789,3 +789,5 @@ def reverse(head):
     return prev
     
 print_node(reverse(head))
+
+# 26. Detect cycle in a linked lis

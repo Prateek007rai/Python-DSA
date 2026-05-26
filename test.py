@@ -756,4 +756,24 @@ def check_armstrong(num):
 
 print(check_armstrong(153))
 
-# 24. 
+# 24. Linked list class setup
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+def print_node(head):
+    curr = head
+    while curr:
+        print(curr.val, end = " ")
+        curr = curr.next
+    return None
+    
+head = ListNode(1)
+head.next = ListNode(2)
+head.next.next = ListNode(3)
+print_node(head)
+
+
+# 25. Reverse a linked list
+

@@ -776,4 +776,16 @@ print_node(head)
 
 
 # 25. Reverse a linked list
+def reverse(head):
+    curr = head
+    prev = None
 
+    while curr:
+        next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+
+    return prev
+    
+print_node(reverse(head))

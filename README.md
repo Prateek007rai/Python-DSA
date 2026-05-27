@@ -30,7 +30,7 @@
 age = 25
 
 # Float
-
+pi = 3.14159
 
 # String
 name = "Python"

@@ -790,4 +790,16 @@ def reverse(head):
     
 print_node(reverse(head))
 
-# 26. Detect cycle 
+# 26. Detect cycle in a linked list
+def detect_cycle(head):
+    slow = head
+    fast = head
+    
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+
+        if slow == fast:
+            return True
+    
+    return False

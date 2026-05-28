@@ -6,7 +6,8 @@
 
 ## 📌 Table of Contents
 
-
+1. [Variables & Data Types](#1-variables--data-types)
+2. [Strings & String Methods](#2-strings--string-methods)
 3. [Type Conversion](#3-type-conversion)
 4. [Lists & List Methods](#4-lists--list-methods)
 5. [Tuples & Tuple Methods](#5-tuples--tuple-methods)

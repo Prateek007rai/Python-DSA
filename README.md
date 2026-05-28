@@ -32,7 +32,14 @@ age = 25
 # Float
 pi = 3.14159
 
+# String
+name = "Python"
 
+# Boolean
+is_active = True
+
+# NoneType
+nothing = None
 
 # Check type
 print(type(age))       # <class 'int'>

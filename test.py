@@ -806,4 +806,7 @@ def detect_cycle(head):
 
 # 27. Remove Nth node from the end in one pass
 def remove_nth_node(head, n):
-
+    dummy = ListNode(0)
+    dummy.next = head
+    slow = head
+    fast = head

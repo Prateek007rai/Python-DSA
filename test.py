@@ -803,3 +803,7 @@ def detect_cycle(head):
             return True
     
     return False
+
+# 27. Remove Nth node from the end in one pass
+def remove_nth_node(head, n):
+

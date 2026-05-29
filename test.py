@@ -825,4 +825,5 @@ def merge_lists(l1, l2):
     dummy = ListNode(0)
     
     while l1 and l2:
+        if l1.val > l2.val:
 

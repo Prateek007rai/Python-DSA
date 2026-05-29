@@ -822,5 +822,7 @@ def remove_nth_node(head, n):
 
 # 28. Merge Two Sorted Lists
 def merge_lists(l1, l2):
+    dummy = ListNode(0)
     
+    while l1 and l2:
 

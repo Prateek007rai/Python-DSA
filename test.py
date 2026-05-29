@@ -810,3 +810,8 @@ def remove_nth_node(head, n):
     dummy.next = head
     slow = head
     fast = head
+
+    for _ in range(n):
+        fast = fast.next
+
+    while fast.next:

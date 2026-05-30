@@ -864,4 +864,24 @@ def merge_lists(lists):
     
     return dummy.next
 
+# 30. Add 1 to a number(Number is in linked list)
+def add_carry(list):
+    dummy = list
+    head = reverse(list)
+    curr = head
+    carry = 1
+
+    while curr:
+        curr.val = curr.val + carry
+        carry = curr.val // 10
+        curr.val = curr.val % 10
+
+        if carry == 0:
+            break
+
+        if not curr.next:
+            curr.next = ListNode(0)
+        curr = curr.next
+    
+    return reverse(head)
 

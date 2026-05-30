@@ -823,7 +823,45 @@ def remove_nth_node(head, n):
 # 28. Merge Two Sorted Lists
 def merge_lists(l1, l2):
     dummy = ListNode(0)
+    curr = dummy
     
+    # compare and fill in dummy linked list from both list
     while l1 and l2:
         if l1.val > l2.val:
+            dummy.next = l2
+            l2 = l2.next
+        else:
+            dummy.next = l1
+            l1 = l1.next
+        dummy = dummy.next
+    
+    # Now, fill rest items from list
+    if l1:
+        dummy.next = l1
+    if l2:
+        dummy.next = l2
+
+    return curr.next
+
+# 29. Merged K sorted lists
+import heapq
+def merge_lists(lists):
+    dummy = ListNode(0)
+    curr = dummy
+    heap = []
+
+    for i in range(len(lists)):
+        heapq.heappush(heap, (lists[i].val, i, lists[i]))
+    
+    while heap:
+        val, i , node = heapq.heappop(heap)
+
+        curr.next = node
+        curr = curr.next
+
+        if node.next:
+            heapq.heappush(heap, (node.next.val, i, node.next))
+    
+    return dummy.next
+
 

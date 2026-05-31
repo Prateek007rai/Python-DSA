@@ -885,3 +885,38 @@ def add_carry(list):
     
     return reverse(head)
 
+# 31. Reorder linked list
+def reorder_lists(head):
+    if not head:
+        return 
+    
+    slow = fast = head
+
+    # find middle
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+
+    # reverse the middle - end part
+    prev = None
+    curr = slow
+    while curr:
+        next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+
+    # make reordered list
+    first = head         # first linked list
+    second = prev        # second linked list
+
+    while second.next:
+        temp1 = first.next
+        temp2 = second.next
+
+        first.next = second
+        second.next = temp1
+
+        first = temp1
+        second = temp2
+        

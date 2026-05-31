@@ -919,4 +919,6 @@ def reorder_lists(head):
 
         first = temp1
         second = temp2
-        
+
+# 32. clone a linked list
+def clone_list(head)

@@ -924,8 +924,12 @@ def reorder_lists(head):
 def clone_list(head):
     mp = {}
     curr = head
-
     while curr:
         mp[curr] = ListNode(curr.val)
         curr = curr.next
+
+    curr = head
+    while curr:
+        mp[curr].next = mp.get(curr.next)
+        
 

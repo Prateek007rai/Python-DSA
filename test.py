@@ -927,4 +927,5 @@ def clone_list(head):
 
     while curr:
         mp[curr] = ListNode(curr.val)
+        curr = curr.next
 

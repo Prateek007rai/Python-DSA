@@ -933,5 +933,7 @@ def clone_list(head):
         mp[curr].next = mp.get(curr.next)
         mp[curr].random = mp.get(curr.random)
         curr = curr.next
+    
+    return mp[head]
 
 

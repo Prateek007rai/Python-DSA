@@ -922,3 +922,4 @@ def reorder_lists(head):
 
 # 32. clone a linked list
 def clone_list(head):
+    mp = {}

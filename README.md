@@ -1,8 +1,3 @@
-# 🐍 Python Deep Guide - Basics
-
-> Data structures - https://preview--pk-dsa.lovable.app/
-> Database - https://pk-db.lovable.app/
----
 
 ## 📌 Table of Contents
 

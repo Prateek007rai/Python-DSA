@@ -1,4 +1,3 @@
-
 # Area contain most water 
 
 def trapping_rain_water(arr):

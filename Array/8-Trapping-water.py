@@ -25,4 +25,3 @@ def trapping_rain_water(arr):
     
 
 print(trapping_rain_water([0,1,0,2,1]))
-            

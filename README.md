@@ -16,7 +16,10 @@
 8. [List vs Tuple vs Set vs Dict — Comparison](#8-list-vs-tuple-vs-set-vs-dict--comparison)
 9. [Slicing — Strings, Lists & Arrays](#9-slicing--strings-lists--arrays)
 10. [Arrays (via `array` module)](#10-arrays-via-array-module)
-
+11. [Loops & Iteration](#11-loops--iteration)
+12. [Comprehensions](#12-comprehensions)
+13. [Functions — Basics to Advanced](#13-functions--basics-to-advanced)
+14. [Quick Cheat Sheet](#14-quick-cheat-sheet)
 
 ---
 

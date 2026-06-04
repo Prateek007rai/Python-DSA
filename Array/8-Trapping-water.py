@@ -2,11 +2,7 @@
 # Area contain most water 
 
 def trapping_rain_water(arr):
-    l = 0
-    r= len(arr) -1
-    left_max = 0
-    right_max = 0
-    sum_water = 0
+    
 
     while l<r:
         if arr[l] <= arr[r]:

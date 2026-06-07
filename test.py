@@ -936,5 +936,5 @@ def clone_list(head):
     
     return mp[head]
 
-# Strings start
+# S
 # 33. reverse string

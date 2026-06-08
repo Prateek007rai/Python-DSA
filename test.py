@@ -938,4 +938,4 @@ def clone_list(head):
 
 # Strings start
 # 33. reverse string
-def
+de

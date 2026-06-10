@@ -944,4 +944,10 @@ def rev_str(s):
 print(rev_str("Hey Prateek"))
 
 def rev_str2(s):
+    res = ''
+
+    for ch in s:
+        res = ch + res
     
+    return res
+print(rev_str2("Knock knock"))

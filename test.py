@@ -938,4 +938,7 @@ def clone_list(head):
 
 # Strings start
 # 33. reverse string
-def rev_str():
+def rev_str(s):
+    return s[::-1]
+
+print(rev_str("Hey Prateek"))

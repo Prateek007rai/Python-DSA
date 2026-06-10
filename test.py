@@ -942,3 +942,6 @@ def rev_str(s):
     return s[::-1]
 
 print(rev_str("Hey Prateek"))
+
+def rev_str2(s):
+    

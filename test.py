@@ -950,4 +950,4 @@ def rev_str2(s):
         res = ch + res
     
     return res
-
+print(rev_str2("Knock knock"))

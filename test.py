@@ -941,3 +941,4 @@ def clone_list(head):
 def rev_str(s):
     return s[::-1]
 
+print(rev_str("Hey Prateek"))

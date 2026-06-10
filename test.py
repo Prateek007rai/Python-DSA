@@ -953,4 +953,7 @@ def rev_str2(s):
 print(rev_str2("Knock knock"))
 
 # 34. Longest substring without repeating char
-
+def longest_unique(s):
+    seen = set()
+    l = 0
+    

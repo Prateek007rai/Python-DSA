@@ -951,3 +951,6 @@ def rev_str2(s):
     
     return res
 print(rev_str2("Knock knock"))
+
+# 34. Longest substring without repeating char
+

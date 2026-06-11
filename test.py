@@ -970,5 +970,4 @@ def longest_unique(s):
 print(longest_unique("abcabcbb"))
 
 
-# 35. string compressio
-
+# 35. string compression

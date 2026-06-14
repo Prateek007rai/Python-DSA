@@ -987,4 +987,16 @@ def str_comp(s):
 
     return res  
 
-print(str_comp("aaaabbbbcce"))
+print(str_comp("aaaabbbbccebbbb"))
+
+def str_comp_2(s):
+    count_obj = {}
+    res = ''
+    for ch in s:
+        count_obj[ch] = count_obj.get(ch, 0) + 1
+    
+    for ch in count_obj:
+        res = res + ch + str(count_obj[ch])
+    return res
+
+print(str_comp_2("aaaabbbbccebbbb"))

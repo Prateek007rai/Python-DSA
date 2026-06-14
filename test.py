@@ -1000,3 +1000,5 @@ def str_comp_2(s):
     return res
 
 print(str_comp_2("aaaabbbbccebbbb"))
+
+# 36.

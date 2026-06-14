@@ -971,3 +971,20 @@ print(longest_unique("abcabcbb"))
 
 
 # 35. string compression
+def str_comp(s):
+    count = 1
+    res = ''
+
+    for i in range(1, len(s)):
+        if s[i] != s[i-1]:
+            res = res + s[i-1] + str(count)
+            count = 1
+        else:
+            count = count + 1 
+    
+    # for very last element
+    res = res + s[-1] + str(count)
+
+    return res  
+
+print(str_comp("aaaabbbbcce"))

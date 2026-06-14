@@ -1003,6 +1003,6 @@ print(str_comp_2("aaaabbbbccebbbb"))
 
 # 36. Longest Common Prefix
 def long_prefix(arr):
-    
+    res = arr[0]
 
 print(long_prefix(['flower', 'flow', 'floor', 'flour']))

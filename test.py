@@ -1001,4 +1001,4 @@ def str_comp_2(s):
 
 print(str_comp_2("aaaabbbbccebbbb"))
 
-# 36.
+# 36. Longest 

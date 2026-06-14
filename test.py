@@ -1005,4 +1005,9 @@ print(str_comp_2("aaaabbbbccebbbb"))
 def long_prefix(arr):
     res = arr[0]
 
+    for word in arr[1: ]:
+        while word.find(res) != 0:
+            res = res[:-1]
+    return res
+
 print(long_prefix(['flower', 'flow', 'floor', 'flour']))

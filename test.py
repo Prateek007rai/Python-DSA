@@ -1002,3 +1002,5 @@ def str_comp_2(s):
 print(str_comp_2("aaaabbbbccebbbb"))
 
 # 36. Longest Common Prefix
+def long_prefix(arr):
+    

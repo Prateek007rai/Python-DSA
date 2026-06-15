@@ -1011,3 +1011,22 @@ def long_prefix(arr):
     return res
 
 print(long_prefix(['flower', 'flow', 'floor', 'flour']))
+
+# 37. Valid Paranthesis
+def valid_paranthesis(s):
+    stack = []
+    match = {
+        ')': '(',
+        '}': '{',
+        ']': '['
+    }
+
+    for i in s:
+        if i not in match:
+            stack.append(i)
+        if i in match and match[i] == stack[-1]:
+            stack.pop()
+
+    return len(stack) == 0
+
+print(valid_paranthesis("()[]{}{"))

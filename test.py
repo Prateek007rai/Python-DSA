@@ -1032,3 +1032,4 @@ def valid_paranthesis(s):
 print(valid_paranthesis("()[]{}{"))
 
 # 38. Longest repeating char replacement
+def

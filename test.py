@@ -1030,3 +1030,5 @@ def valid_paranthesis(s):
     return len(stack) == 0
 
 print(valid_paranthesis("()[]{}{"))
+
+# 38

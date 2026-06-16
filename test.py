@@ -1051,3 +1051,5 @@ def char_replace(s,k):
     return res
 
 print(char_replace("AABABBA", 1))
+
+# 39

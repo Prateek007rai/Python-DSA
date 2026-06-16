@@ -1067,5 +1067,25 @@ def group_ana(arr):
 
 print(group_ana(["eat", "tea","ate", "tan", "ant"]))
 
+# 40. Sentence Palindrome
+def sentence_palindrome(s):
+    l = 0
+    r = len(s) - 1
 
-# 40. 
+    while l<r :
+        if s[l] == " ":
+            l += 1
+            continue
+        if s[r] == " ":
+            r -= 1
+            continue
+        if s[l].lower() != s[r].lower():
+            return False
+        l += 1
+        r -= 1
+    
+    return True
+
+print(sentence_palindrome("A man a plan a canal Panama"))
+
+# 41. Smallest Window Containing All chars

@@ -1036,3 +1036,4 @@ def char_replace(s,k):
     count = {}
     l = 0
     max_freq = 0
+    res = 0

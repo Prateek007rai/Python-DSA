@@ -1088,4 +1088,8 @@ def sentence_palindrome(s):
 
 print(sentence_palindrome("A man a plan a canal Panama"))
 
-# 41. Smallest Window Containing All chars
+# 41. Longest palindrome substring
+
+# 42. Smallest Window Containing All chars
+
+# 43. Count Palindrome String

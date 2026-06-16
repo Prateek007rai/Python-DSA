@@ -1052,4 +1052,4 @@ def char_replace(s,k):
 
 print(char_replace("AABABBA", 1))
 
-# 39
+# 39. Print all anagrams together

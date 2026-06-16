@@ -1049,3 +1049,5 @@ def char_replace(s,k):
         res = max(res, r-l+1)
     
     return res
+
+print(char_replace("AABABBA", 1))

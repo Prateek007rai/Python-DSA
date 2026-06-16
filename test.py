@@ -1066,3 +1066,6 @@ def group_ana(arr):
     return list(res.values())
 
 print(group_ana(["eat", "tea","ate", "tan", "ant"]))
+
+
+# 40. 

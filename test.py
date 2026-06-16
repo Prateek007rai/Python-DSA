@@ -1053,3 +1053,16 @@ def char_replace(s,k):
 print(char_replace("AABABBA", 1))
 
 # 39. Print all anagrams together
+def group_ana(arr):
+    res = {}
+
+    for word in arr:
+        key = "".join(sorted(word))
+
+        if key not in res:
+            res[key] = []
+        res[key].append(word)
+    
+    return list(res.values())
+
+print(group_ana(["eat", "tea","ate", "tan", "ant"]))

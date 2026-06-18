@@ -1104,6 +1104,7 @@ print(longest_pal('babad'))
 
 # 42. Smallest Window Containing All chars
 
-# 43. Count Palindrome String
+# 43. Count Palindrome Substring
+def count_pal_substring(s):
 
 

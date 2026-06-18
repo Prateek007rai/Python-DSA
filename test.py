@@ -1094,7 +1094,9 @@ def longest_pal(s):
 
     for i in range(len(s)):
         for l,r in [(i, i), (i, i+1)]:
-            
+            while l > 0 and r < len(s) and s[l] == s[r]:
+
+
 
 # 42. Smallest Window Containing All chars
 

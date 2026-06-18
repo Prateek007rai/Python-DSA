@@ -1110,5 +1110,5 @@ def count_pal_substring(s):
 
     for i in range(len(s)):
        l = r = i
-       while
+       while l >= 0
 

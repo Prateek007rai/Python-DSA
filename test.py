@@ -1089,6 +1089,12 @@ def sentence_palindrome(s):
 print(sentence_palindrome("A man a plan a canal Panama"))
 
 # 41. Longest palindrome substring
+def longest_pal(s):
+    res = ""
+
+    for i in range(len(s)):
+        for l,r in [(i, i), (i, i+1)]:
+            
 
 # 42. Smallest Window Containing All chars
 

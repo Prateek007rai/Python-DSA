@@ -1103,12 +1103,53 @@ def longest_pal(s):
 print(longest_pal('babad'))
 
 # 42. Smallest Window Containing All chars
+def min_window(s, t):
+    from collections import Counter
+
+    need = Counter(t)
+    l = 0
+    res = ""
+    have = {}
+    formed = 0
+    required = len(need)
+
+    for r in range(len(s)):
+        have[s[r]] = have.get(s[r], 0) + 1
+
+        if s[r] in need and have[s[r]] == need[s[r]]:
+            formed += 1
+        
+        while formed == required:
+            if res == "" or len(s[l: r+1]) < len(res):
+                res = s[l:r+1]
+            have[s[l]] = have[s[l]] - 1
+            if s[l] in need and have[s[l]] < need[s[l]]:
+                formed -= 1
+            l += 1
+    return res
+
+print(min_window("ADOBECODEBANC", "ABC"))
 
 # 43. Count Palindrome Substring
 def count_pal_substring(s):
     count = 0
 
     for i in range(len(s)):
-       l = r = i
-       while l >= 0 and r < len(s) and s[l] == s[r]:
+        l = r = i
+        while l >= 0 and r < len(s) and s[l] == s[r]:
+           count = count + 1
+           l -= 1
+           r += 1
+        
+        l = i 
+        r = i + 1
+        while l >= 0 and r < len(s) and s[l] == s[r]:
+            count = count + 1
+            l -= 1
+            r += 1
+    return count
 
+print(count_pal_substring("aaa"))
+        
+
+# Misc Series - 8 ques

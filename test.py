@@ -1177,7 +1177,7 @@ def move_zeroes(arr):
 
     for l in range(len(arr)):
         if arr[l] != 0:
-            # arr[l], arr[r] = arr[r], arr[l]
+            arr[l], arr[r] = arr[r], arr[l]
             r += 1
     
     return arr

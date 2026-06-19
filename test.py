@@ -1153,3 +1153,21 @@ print(count_pal_substring("aaa"))
         
 
 # Misc Series - 8 ques
+# 44. Rotate Array
+def rotate_arr(arr, k):
+    n = len(arr)
+    k = k % n
+    def reversal(l, r):
+        while l < r:
+            arr[l], arr[r] = arr[r], arr[l]
+            l += 1
+            r -= 1
+    
+    reversal(0, n-1)
+    reversal(0, k-1)
+    reversal(k, n-1)
+
+    return arr
+
+print("rotate arr: ", rotate_arr([1,2,3,4,5,6,7], 2))
+        

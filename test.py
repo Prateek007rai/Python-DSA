@@ -1198,3 +1198,15 @@ def highest_num(arr):
     return second
 
 print(highest_num([24,36,30, 10, 5]))
+
+# 47. Number of set bits
+def count_bits(n):
+    count = 0
+
+    while n:
+        n = n & (n-1)
+        count += 1
+    
+    return count
+
+print(count_bits(11))

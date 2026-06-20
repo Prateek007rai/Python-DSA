@@ -1210,3 +1210,10 @@ def count_bits(n):
     return count
 
 print(count_bits(11))
+
+
+# 48. is power of 2
+def is_power_of_two(n):
+    return (n & (n-1)) == 0
+
+print(is_power_of_two(18))

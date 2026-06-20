@@ -1177,9 +1177,24 @@ def move_zeroes(arr):
 
     for l in range(len(arr)):
         if arr[l] != 0:
-            arr[l], arr[r] = arr[r], arr[l]
-            r += 1
+            arr[r], arr[l] = arr[l], arr[r]
+            r = r + 1 
     
     return arr
 
 print(move_zeroes([1,0,0,2,0,4,0,0]))
+
+# 46. 2nd highest number
+def highest_num(arr):
+    first = second = float('-inf')
+
+    for num in arr:
+        if num > first:
+            second = first
+            first = num      
+        elif first > num > second:
+            second = num
+    
+    return second
+
+print(highest_num([24,36,30, 10, 5]))

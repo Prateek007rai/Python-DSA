@@ -1211,9 +1211,19 @@ def count_bits(n):
 
 print(count_bits(11))
 
-
 # 48. is power of 2
 def is_power_of_two(n):
     return (n & (n-1)) == 0
 
 print(is_power_of_two(18))
+
+# 49. Detect cycle in linked list
+def has_cycle(head):
+    slow = head
+    fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if fast == slow:
+            return True
+    return False

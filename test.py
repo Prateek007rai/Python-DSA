@@ -1227,3 +1227,16 @@ def has_cycle(head):
         if fast == slow:
             return True
     return False
+
+# 50. Reverse a linked list
+def rev_list(head):
+    prev = None
+    curr = head
+
+    while curr:
+        next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+    
+    return prev

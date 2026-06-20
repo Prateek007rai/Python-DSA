@@ -1173,7 +1173,7 @@ print("rotate arr: ", rotate_arr([1,2,3,4,5,6,7], 2))
 
 # 45. Move zeroes to the end of arr
 def move_zeroes(arr):
-    # r = 0
+    r = 0
 
     for l in range(len(arr)):
         if arr[l] != 0:

@@ -1249,5 +1249,21 @@ def find_missing(arr):
     return total_sum - arr_sum
 print(find_missing([3,0,1]))
 
-
 # 52. Find Element that appears more than n/2 times
+# Boyre Moore Voting Algo
+def find_ele_nbytwo_times(arr):
+    count = 0
+    candidate = None
+
+    for ele in arr:
+        if count == 0:
+            candidate = ele
+        
+        if candidate == ele:
+            count = count + 1
+        else:
+            count = count -1
+
+    return candidate
+
+print(find_ele_nbytwo_times([3,2,3])) 

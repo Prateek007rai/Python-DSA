@@ -1240,3 +1240,14 @@ def rev_list(head):
         curr = next
     
     return prev
+
+# 51. Find Missing number
+def find_missing(arr):
+    n = len(arr) + 1
+    total_sum = int((n * (n-1))/2)
+    arr_sum = sum(arr)
+    return total_sum - arr_sum
+print(find_missing([3,0,1]))
+
+
+# 52. Find Element that appears more than n/2 times

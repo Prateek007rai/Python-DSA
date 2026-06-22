@@ -1351,3 +1351,5 @@ def search_pos(arr, target):
     return s
 
 print(search_pos([1,3,5,5,5,6], 7))
+
+# 56. Merge sort

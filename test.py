@@ -1334,5 +1334,20 @@ print(first_last_occ([1,2,2,2,3], 2))
 
 # 55. Search insert position
 def search_pos(arr, target):
+    s = 0
+    e = len(arr) - 1
 
-print(search_pos([1,3,5,6], 2))
+    while s <= e:
+        mid = (s+e)//2
+
+        if arr[mid] == target:
+            return mid
+
+        if arr[mid] > target:
+            e = mid - 1
+        elif arr[mid] < target:
+            s = mid + 1
+
+    return s
+
+print(search_pos([1,3,5,5,5,6], 7))

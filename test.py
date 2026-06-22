@@ -1353,3 +1353,34 @@ def search_pos(arr, target):
 print(search_pos([1,3,5,5,5,6], 7))
 
 # 56. Merge sort
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    
+    mid = len(arr) // 2
+    left_arr_sorted = merge_sort(arr[:mid])
+    right_arr_sorted = merge_sort(arr[mid:])
+    
+    return merge(left_arr_sorted, right_arr_sorted)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+
+    while i < len(left) and j < len(right):
+
+        if left[i] < right[j]:
+            result.append(left[i])
+            i = i + 1
+        else:
+            result.append(right[j])
+            j = j + 1
+
+    result.extend(left[i: ])
+    result.extend(right[j: ])
+
+    return result 
+
+
+print(merge_sort([5,3,7,0,9,22,43,30]))
+    

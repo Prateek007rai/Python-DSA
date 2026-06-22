@@ -1332,3 +1332,7 @@ def first_last_occ(arr, target):
 print(first_last_occ([1,2,2,2,3], 2))
 
 
+# 55. Search insert position
+def search_pos(arr, target):
+
+print(search_pos([1,3,5,6], 2))

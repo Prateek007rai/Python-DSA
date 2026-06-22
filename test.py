@@ -1292,6 +1292,43 @@ print(binary_search([1,2,5,6,9], 6))
 # 54. First and Last Occurence
 def first_last_occ(arr, target):
 
+    def find_first():
+        s = 0
+        e = len(arr) - 1
+        pos = None
+
+        while s <= e:
+            mid = (s+e) // 2
+            if arr[mid] == target:
+                pos = mid
+                e = mid - 1
+            
+            if arr[mid] > target:
+                e = mid - 1
+            elif arr[mid] < target:
+                s = mid + 1
+        
+        return pos
+    
+    def find_last():
+        s = 0
+        e = len(arr) - 1
+        pos = None
+
+        while s <= e:
+            mid = (s+e) // 2
+            if arr[mid] == target:
+                pos = mid
+                s = mid + 1
+            
+            if arr[mid] > target:
+                e = mid - 1
+            elif arr[mid] < target:
+                s = mid + 1
+        
+        return pos
+
+    return [find_first(), find_last()]
 print(first_last_occ([1,2,2,2,3], 2))
 
 

@@ -1329,6 +1329,6 @@ def first_last_occ(arr, target):
         return pos
 
     return [find_first(), find_last()]
-
+print(first_last_occ([1,2,2,2,3], 2))
 
 

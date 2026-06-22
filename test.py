@@ -1289,4 +1289,9 @@ def binary_search(arr, target):
 
 print(binary_search([1,2,5,6,9], 6))
 
+# 54. First and Last Occurence
+def first_last_occ(arr, target):
+
+print(first_last_occ([1,2,2,2,3], 2))
+
 

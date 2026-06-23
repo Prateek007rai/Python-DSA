@@ -1385,9 +1385,9 @@ print(merge_sort([5,3,7,0,9,22,43,30]))
 
 # 57. Search in rotated array
 
-58. Peak Element
+# 58. Peak Element
 
-# 59. Kth element of two sorted arrays
+59. Kth element of two sorted arrays
 
 # 60. Allocate min pages
 

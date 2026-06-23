@@ -1389,6 +1389,6 @@ print(merge_sort([5,3,7,0,9,22,43,30]))
 
 # 59. Kth element of two sorted arrays
 
-60. Allocate min pages
+# 60. Allocate min pages
 
     

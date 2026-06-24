@@ -8,8 +8,8 @@ from collections import Counter
 
 def top_k_freq(arr, k):
     freq = Counter(arr)
-    # heap = []
-    # res = []
+    heap = []
+    res = []
 
     print(freq)
     for num,count in freq.items():

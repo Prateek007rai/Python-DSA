@@ -4,7 +4,7 @@
 # o/p: [1,2]
 
 import heapq
-from collections import Counter
+# from collections import Counter
 
 def top_k_freq(arr, k):
     freq = Counter(arr)

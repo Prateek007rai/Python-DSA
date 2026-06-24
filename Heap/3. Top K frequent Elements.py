@@ -25,4 +25,4 @@ def top_k_freq(arr, k):
     return res
 
 
-print(top_k_freq([1,1,1,2,2,3], 2))
+# print(top_k_freq([1,1,1,2,2,3], 2))

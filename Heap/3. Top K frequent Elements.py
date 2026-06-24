@@ -19,8 +19,8 @@ def top_k_freq(arr, k):
             heapq.heappop(heap)
     print(heap)
 
-    # for count, num in heap:
-    #     res.append(num)
+    for count, num in heap:
+        res.append(num)
 
     return res
 

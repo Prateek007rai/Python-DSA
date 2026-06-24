@@ -11,7 +11,7 @@ def top_k_freq(arr, k):
     heap = []
     res = []
 
-    print(freq)
+    # print(freq)
     for num,count in freq.items():
         heapq.heappush(heap, [num,count])
 

@@ -1384,6 +1384,30 @@ def merge(left, right):
 print(merge_sort([5,3,7,0,9,22,43,30]))
 
 # 57. Search in rotated array
+def search_rotated_arr(arr, target):
+    l, r = 0, len(arr) - 1
+
+    while l <= r:
+        mid = (l+r)//2
+
+        # base condn
+        if arr[mid] == target:
+            return mid
+
+        if arr[l] <= arr[mid]:
+            if arr[l] <= target <= arr[mid]:
+                r = mid-1
+            else:
+                l = mid + 1
+        else:
+            if arr[mid] <= target <= arr[r]:
+                l = mid + 1
+            else:
+                r = mid - 1
+    
+    return None
+
+print(search_rotated_arr([4,5,6,7,0,1,2], 0))
 
 # 58. Peak Element
 

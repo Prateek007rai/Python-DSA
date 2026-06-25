@@ -1410,6 +1410,7 @@ def search_rotated_arr(arr, target):
 print(search_rotated_arr([4,5,6,7,0,1,2], 0))
 
 # 58. Peak Element
+def Peak_element(arr):
 
 # 59. Kth element of two sorted arrays
 

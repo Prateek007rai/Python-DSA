@@ -1414,7 +1414,10 @@ def Peak_element(arr):
     l, r = 0, len(arr) - 1
 
     while l <= r:
-        
+        mid = (l+r) // 2
+        if arr[mid] < arr[mid+1]:
+            
+
 
 
 # 59. Kth element of two sorted arrays

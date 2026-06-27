@@ -1423,7 +1423,7 @@ def Peak_element(arr):
 
 print(Peak_element([1,2,3,1]))
 
-59. Kth element of two sorted arrays
+# 59. Kth element of two sorted arrays
 
 # 60. Allocate min pages
 

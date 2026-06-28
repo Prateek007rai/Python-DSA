@@ -1427,7 +1427,7 @@ print(Peak_element([1,2,3,1]))
 
 # 60. Allocate min pages
 
-# 61. Kth - Missing positive number
+61. Kth - Missing positive number
 
 # 62. Sort 0s, 1s and 2s using Dutch National Flag
 

@@ -1405,7 +1405,7 @@ def search_rotated_arr(arr, target):
             else:
                 r = mid - 1
     
-    return None
+    # return None
 
 print(search_rotated_arr([4,5,6,7,0,1,2], 0))
 

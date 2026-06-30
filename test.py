@@ -1401,7 +1401,7 @@ def search_rotated_arr(arr, target):
                 l = mid + 1
         else:
             if arr[mid] <= target <= arr[r]:
-                # l = mid + 1
+                l = mid + 1
             else:
                 r = mid - 1
     

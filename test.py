@@ -1353,7 +1353,7 @@ def search_pos(arr, target):
 print(search_pos([1,3,5,5,5,6], 7))
 
 # 56. Merge sort
-def merge_sort(arr):
+# def merge_sort(arr):
     if len(arr) <= 1:
         return arr
     

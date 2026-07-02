@@ -317,8 +317,25 @@ def anagrams_together(arr):
     
     return list(keys.values())
 
-print("Anagram collection: ", anagrams_together(["ate", "eat", "cat", "tac", "sat"]))       
+print("Anagram collection: ", anagrams_together(["ate", "eat", "cat", "tac", "sat"]))   
 
+# String compression
+
+def compress(str1):
+    res = ''
+    count = 1
+
+    for i in range(1, len(str1)):
+        if str1[i] == str1[i-1]:
+            count += 1
+        else:
+            res = res + str1[i-1] + str(count)
+            count = 1
+    
+    res = res + str1[-1] + str(count) 
+    return res
+
+print(compress("aaaaaa"))
 
 
 # START A NEW DAY WITH A NEW THOUGHT

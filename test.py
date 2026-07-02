@@ -385,6 +385,20 @@ class MyQueue:
         """Returns whether the queue is empty."""
         # The queue is empty only if both stacks have no elements
         return not self.s1 and not self.s2
+    
+# 2nd highest number in array 
+
+def find_num(arr):
+    first = second = float('-inf')
+
+    for num in arr:
+        if num > first: 
+            second = first
+            first = num
+        elif first > num > second:
+            second = num
+    return second
+print(find_num([34,45,53,21,24,64,54]))
 
 
 # START A NEW DAY WITH A NEW THOUGHT

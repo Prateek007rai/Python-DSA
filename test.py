@@ -304,6 +304,28 @@ def long_ch_repeat_replace(s, k):
 
 print("Check for longest char replacement: ", long_ch_repeat_replace("AABABBB", 1))
 
+
+# Longest substring without repeating char
+def long_sub_1(s):
+    max_len = 0
+    seen = set()
+    l = 0
+
+    for r in range(len(s)):
+
+        # shrink the sliding window
+        while s[r] in seen:
+            seen.remove(s[l])
+            l += 1
+
+        seen.add(s[r])
+
+        max_len = max(r-l+1, max_len)            #max len or sliding window size(r-l+1)
+    
+    return max_len
+
+print("Longest substring without repeating char: ", long_sub_1("abcabcbb"))
+
 # print all anagrams together
 def anagrams_together(arr):
     keys = {}

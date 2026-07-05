@@ -434,7 +434,6 @@ def is_valid_paranthesis_1(s):
     return len(stack) == 0
 
 print("Check is valid paranthesis: ", is_valid_paranthesis_1("()[]{}"))
-print("Check is valid paranthesis: ", is_valid_paranthesis_1("()(()"))
 
 
 # START A NEW DAY WITH A NEW THOUGHT

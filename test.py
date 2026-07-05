@@ -413,7 +413,28 @@ def anagrams_together_1(arr):
     
     return list(keys.values())
 
-print("Anagram collection: ", anagrams_together_1(["ate", "eat", "cat", "tac", "sat"]))   
+print("Anagram collection: ", anagrams_together_1(["ate", "eat", "cat", "tac", "sat"]))  
+
+# Valid paranthesis
+def is_valid_paranthesis_1(s):
+    stack = []
+    mp = {
+        ')': '(',
+        '}': '{',
+        ']': '['
+    }
+
+    for ch in s:
+        if ch in mp:
+            if not stack or stack[-1] != mp[ch]:
+                return False
+            stack.pop()
+        else:
+            stack.append(ch)
+    return len(stack) == 0
+
+print("Check is valid paranthesis: ", is_valid_paranthesis_1("()[]{}"))
+print("Check is valid paranthesis: ", is_valid_paranthesis_1("()(()"))
 
 
 # START A NEW DAY WITH A NEW THOUGHT

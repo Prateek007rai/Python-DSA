@@ -400,6 +400,21 @@ def find_num(arr):
     return second
 print(find_num([34,45,53,21,24,64,54]))
 
+# print all anagrams together
+def anagrams_together_1(arr):
+    keys = {}
+
+    for word in arr:
+        wordVal = "".join(sorted(word))
+
+        if wordVal not in keys:
+            keys[wordVal] = []
+        keys[wordVal].append(word)
+    
+    return list(keys.values())
+
+print("Anagram collection: ", anagrams_together_1(["ate", "eat", "cat", "tac", "sat"]))   
+
 
 # START A NEW DAY WITH A NEW THOUGHT
 

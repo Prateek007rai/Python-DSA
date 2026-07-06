@@ -430,7 +430,7 @@ def longest_common_prefix1(arr):
         while word.find(prefix) != 0:
             prefix = prefix[:-1]
 
-    return prefix
+    # return prefix
 
 print("Longest common prefix: ", longest_common_prefix1(['flower', 'flow', 'flown', 'floor', 'fast']))
 

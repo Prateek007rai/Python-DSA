@@ -428,7 +428,7 @@ def longest_common_prefix1(arr):
 
     for word in arr:
         while word.find(prefix) != 0:
-            prefix = prefix[:-1]
+            # prefix = prefix[:-1]
 
     return prefix
 

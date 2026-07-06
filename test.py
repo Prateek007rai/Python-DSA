@@ -426,7 +426,7 @@ print(find_num([34,45,53,21,24,64,54]))
 def longest_common_prefix1(arr):
     prefix = arr[0]
 
-    # for word in arr:
+    for word in arr:
         while word.find(prefix) != 0:
             prefix = prefix[:-1]
 

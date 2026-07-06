@@ -435,7 +435,7 @@ def longest_common_prefix1(arr):
 print("Longest common prefix: ", longest_common_prefix1(['flower', 'flow', 'flown', 'floor', 'fast']))
 
 # print all anagrams together
-# def anagrams_together_1(arr):
+def anagrams_together_1(arr):
     keys = {}
 
     for word in arr:

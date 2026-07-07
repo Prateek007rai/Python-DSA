@@ -1601,6 +1601,19 @@ print(kth_ele([2,3,6,7,9], [1,4,8,10], 5))
 
 # 60. Allocate min pages
 def allocate_minpage(arr, m):
+    def isValid(mid):
+        pages = 0
+        students = 1
+
+        for num in arr:
+            if pages + num > mid:
+                students = students + 1
+                pages = num
+            else:
+                pages = pages + num
+        
+        return students <= m
+
     l = max(arr)
     r = sum(arr)
 

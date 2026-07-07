@@ -1600,6 +1600,9 @@ def kth_ele(a,b,k):
 print(kth_ele([2,3,6,7,9], [1,4,8,10], 5))
 
 # 60. Allocate min pages
+def allocate_minpage(arr, m):
+    l = max(arr)
+    r = sum(arr)
 
 # 61. Kth - Missing positive number
 

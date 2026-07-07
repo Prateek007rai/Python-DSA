@@ -1573,6 +1573,30 @@ def Peak_element(arr):
 print(Peak_element([1,2,3,1]))
 
 # 59. Kth element of two sorted arrays
+def kth_ele(a,b,k):
+    i = 0
+    j = 0
+
+    while True:
+        if i == len(a):
+            return b[j+k-1]
+        if j == len(b):
+            return a[i+k-1]
+        
+        if k == 1:
+            return min(a[i], b[j])
+        
+        mid = k//2
+        new_i = min(i+mid, len(a)) - 1
+        new_j = min(j+mid, len(b)) - 1
+
+        if a[new_i] >= b[new_j]:
+            k = k - (new_j - j + 1)
+            j = new_j + 1
+        else:
+            k = k - (new_i - i + 1)
+            i = new_i
+
 
 # 60. Allocate min pages
 

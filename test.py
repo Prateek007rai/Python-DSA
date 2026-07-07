@@ -1639,6 +1639,7 @@ def kth_ele_positive_number(arr, k):
         else: 
             r = mid - 1
     return l + k
+print(kth_ele_positive_number([2,3,4,7,11], 5))
 
 # 62. Sort 0s, 1s and 2s using Dutch National Flag
 

@@ -1595,8 +1595,9 @@ def kth_ele(a,b,k):
             j = new_j + 1
         else:
             k = k - (new_i - i + 1)
-            i = new_i
+            i = new_i + 1
 
+print(kth_ele([2,3,6,7,9], [1,4,8,10], 5))
 
 # 60. Allocate min pages
 

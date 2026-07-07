@@ -1628,6 +1628,17 @@ def allocate_minpage(arr, m):
 print(allocate_minpage([12,34,67,90], 2))
 
 # 61. Kth - Missing positive number
+def kth_ele_positive_number(arr, k):
+    l, r = 0, len(arr) - 1
+    while l <= r:
+        mid = (l + r) // 2
+        missing = arr[mid] - (mid+1)
+
+        if missing <= k:
+            l = mid + 1
+        else: 
+            r = mid - 1
+    return l + k
 
 # 62. Sort 0s, 1s and 2s using Dutch National Flag
 

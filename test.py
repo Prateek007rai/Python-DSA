@@ -1625,6 +1625,8 @@ def allocate_minpage(arr, m):
             l = mid + 1
     return l
 
+print(allocate_minpage([12,34,67,90], 2))
+
 # 61. Kth - Missing positive number
 
 # 62. Sort 0s, 1s and 2s using Dutch National Flag

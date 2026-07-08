@@ -1646,7 +1646,7 @@ print(kth_ele_positive_number([2,3,4,7,11], 5))
 
 # way-2 Using sorting
 
-# 63. Count Inversions
+63. Count Inversions
 
 # 64. Merge two sorted arrays without extraa space
 

@@ -1666,12 +1666,41 @@ def sort_cols_way_two(arr):
     c1 = arr.count(1)
     c2 = arr.count(2)
 
-    arr[:] = [0] * c0 + [1] * c1 + [2] * c2
+    arr = [0] * c0 + [1] * c1 + [2] * c2
     return arr
 
 print(sort_cols_way_two([2,0,2,0,1,1]))
 
 # 63. Count Inversions
+def count_inversions(arr):
+    def merge_sort(arr):
+        if len(arr) <= 1:
+            return 0
+        
+        mid = len(arr)//2
+        left, inv1 = merge_sort(arr[:mid])
+        right, inv2 = merge_sort(arr[mid:])
+
+        merged, inv3 = merge(left, right)
+
+        return merged, inv1+inv2+inv3
+    
+    def merge(left, right):
+        res = []
+        inv = i = j = 0
+
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                res.append(left[i])
+                i += 1
+            else:
+                res.append(right[j])
+                inv = inv + len(left) - i
+                j += 1
+        
+        return res, inv
+    
+    return merge_sort(arr)
 
 # 64. Merge two sorted arrays without extraa space
 

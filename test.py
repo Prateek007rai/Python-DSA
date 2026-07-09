@@ -1675,11 +1675,11 @@ print(sort_cols_way_two([2,0,2,0,1,1]))
 def count_inversions(arr):
     def merge_sort(arr):
         if len(arr) <= 1:
-            return 0
+            return arr, 0
         
         mid = len(arr)//2
-        left, inv1 = merge_sort(arr[:mid])
-        right, inv2 = merge_sort(arr[mid:])
+        left, inv1 = merge_sort(arr[ :mid])
+        right, inv2 = merge_sort(arr[mid: ])
 
         merged, inv3 = merge(left, right)
 
@@ -1697,10 +1697,14 @@ def count_inversions(arr):
                 res.append(right[j])
                 inv = inv + len(left) - i
                 j += 1
+
+        res.extend(left[i:])
+        res.extend(right[j:])
         
         return res, inv
     
     return merge_sort(arr)
+print(count_inversions([2,4,1,3,5]))
 
 # 64. Merge two sorted arrays without extraa space
 

@@ -1669,6 +1669,8 @@ def sort_cols_way_two(arr):
     arr[:] = [0] * c0 + [1] * c1 + [2] * c2
     return arr
 
+print(sort_cols_way_two([2,0,2,0,1,1]))
+
 # 63. Count Inversions
 
 # 64. Merge two sorted arrays without extraa space

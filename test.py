@@ -1714,13 +1714,17 @@ def merge_two_sort_arrs(arr1, arr2):
     while i >= 0 and j < n:
         if arr1[i] > arr2[j]:
             arr1[i], arr2[j] = arr2[j], arr1[i]
-            i -= 1
-            j += 1
+        i -= 1
+        j += 1
     
     arr1.sort()
     arr2.sort()
-
+    
+    print(arr1)
+    print(arr2)
+    
     return arr1, arr2
+print(merge_two_sort_arrs([1,5,9,10,15], [2,3,8,13]))
 
 # 65. Choclate Distribution Problem
 

@@ -1649,7 +1649,7 @@ def sort_cols(arr):
     mid = 0
     high = len(arr) - 1
 
-    while mid < high:
+    while mid <= high:
         if arr[mid] == 0:
             arr[l], arr[mid] = arr[mid], arr[l]
             l += 1
@@ -1658,7 +1658,7 @@ def sort_cols(arr):
             high -= 1
         mid += 1
     return arr
-
+print(sort_cols([2,0,2,0,1,1]))
 
 # way-2 Using sorting
 

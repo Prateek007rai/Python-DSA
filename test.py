@@ -1727,6 +1727,17 @@ def merge_two_sort_arrs(arr1, arr2):
 print(merge_two_sort_arrs([1,5,9,10,15], [2,3,8,13]))
 
 # 65. Choclate Distribution Problem
+def choclate_problem(arr, m):
+    if m == 0 and len(arr) == 0:
+        return 0
+    
+    arr.sort()
+    res = float('inf')
+
+    for i in range(len(arr) - m + 1):
+        res = min(res, arr[i+m-1] - arr[i])
+    
+    return res
 
 # 66. Sort Numbers (odd in descending and even in ascending)
 

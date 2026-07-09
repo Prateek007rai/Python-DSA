@@ -1643,10 +1643,26 @@ print(kth_ele_positive_number([2,3,4,7,11], 5))
 
 # 62. Sort 0s, 1s and 2s using Dutch National Flag
 # way - 1 - Dutch national flag
+def sort_cols(arr):
+    # thre pointers
+    l = 0
+    mid = 0
+    high = len(arr) - 1
+
+    while mid < high:
+        if arr[mid] == 0:
+            arr[l], arr[mid] = arr[mid], arr[l]
+            l += 1
+        elif arr[mid] == 2:
+            arr[mid], arr[high] = arr[high], arr[mid]
+            high -= 1
+        mid += 1
+    return arr
+
 
 # way-2 Using sorting
 
 # 63. Count Inversions
 
-64. Merge two sorted arrays without extraa space
+# 64. Merge two sorted arrays without extraa space
 

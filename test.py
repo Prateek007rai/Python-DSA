@@ -1723,7 +1723,7 @@ def merge_two_sort_arrs(arr1, arr2):
     print(arr1)
     print(arr2)
     
-    return arr1, arr2
+    # return arr1, arr2
 print(merge_two_sort_arrs([1,5,9,10,15], [2,3,8,13]))
 
 # 65. Choclate Distribution Problem

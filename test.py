@@ -1741,5 +1741,3 @@ def choclate_problem(arr, m):
 print(choclate_problem([7,3,2,4,9,12,56], 3))
 
 # 66. Sort Numbers (odd in descending and even in ascending)
-
-

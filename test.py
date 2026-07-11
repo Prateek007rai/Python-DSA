@@ -1720,7 +1720,7 @@ def merge_two_sort_arrs(arr1, arr2):
     arr1.sort()
     arr2.sort()
     
-    # print(arr1)
+    print(arr1)
     print(arr2)
     
     return arr1, arr2

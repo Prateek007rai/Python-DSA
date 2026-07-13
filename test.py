@@ -1730,7 +1730,7 @@ print(merge_two_sort_arrs([1,5,9,10,15], [2,3,8,13]))
 def choclate_problem(arr, m):
     if m == 0 and len(arr) == 0:
         return 0
-    # 
+    
     arr.sort()
     res = float('inf')
 

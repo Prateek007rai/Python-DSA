@@ -1732,7 +1732,7 @@ def choclate_problem(arr, m):
         return 0
     
     arr.sort()
-    res = float('inf')
+    # res = float('inf')
 
     for i in range(len(arr) - m + 1):
         res = min(res, arr[i+m-1] - arr[i])

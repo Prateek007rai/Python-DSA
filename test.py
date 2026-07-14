@@ -1667,7 +1667,7 @@ def sort_cols_way_two(arr):
     c2 = arr.count(2)
 
     arr = [0] * c0 + [1] * c1 + [2] * c2
-    return arr
+    # return arr
 
 print(sort_cols_way_two([2,0,2,0,1,1]))
 

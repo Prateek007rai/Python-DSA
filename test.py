@@ -1738,6 +1738,6 @@ def choclate_problem(arr, m):
         res = min(res, arr[i+m-1] - arr[i])
     
     return res
-# print(choclate_problem([7,3,2,4,9,12,56], 3))
+print(choclate_problem([7,3,2,4,9,12,56], 3))
 
 # 66. Sort Numbers (odd in descending and even in ascending)

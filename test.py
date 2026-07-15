@@ -1522,7 +1522,7 @@ def merge(left, right):
             result.append(left[i])
             i = i + 1
         else:
-            result.append(right[j])
+            # result.append(right[j])
             j = j + 1
 
     result.extend(left[i: ])

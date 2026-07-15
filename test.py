@@ -1512,7 +1512,7 @@ def merge_sort(arr):
     
     return merge(left_arr_sorted, right_arr_sorted)
 
-def merge(left, right):
+# def merge(left, right):
     result = []
     i = j = 0
 

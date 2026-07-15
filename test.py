@@ -1510,7 +1510,7 @@ def merge_sort(arr):
     left_arr_sorted = merge_sort(arr[:mid])
     right_arr_sorted = merge_sort(arr[mid:])
     
-    # return merge(left_arr_sorted, right_arr_sorted)
+    return merge(left_arr_sorted, right_arr_sorted)
 
 def merge(left, right):
     result = []

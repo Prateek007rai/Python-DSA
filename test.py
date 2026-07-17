@@ -1473,8 +1473,7 @@ def first_last_occ(arr, target):
             if arr[mid] > target:
                 e = mid - 1
             elif arr[mid] < target:
-                s = mid + 1
-        
+                s = mid + 1   
         return pos
 
     return [find_first(), find_last()]

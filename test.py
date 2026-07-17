@@ -1483,7 +1483,7 @@ print(first_last_occ([1,2,2,2,3], 2))
 
 # 55. Search insert position
 def search_pos(arr, target):
-    s = 0
+    # s = 0
     e = len(arr) - 1
 
     while s <= e:

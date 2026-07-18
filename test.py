@@ -1740,3 +1740,24 @@ def choclate_problem(arr, m):
 print(choclate_problem([7,3,2,4,9,12,56], 3))
 
 # 66. Sort Numbers (odd in descending and even in ascending)
+def sort_numbers_even_odd(arr):
+    n = len(arr)
+    l, r = 0, n-1
+
+    while l < r:
+        if arr[l] % 2 != 0:
+            l += 1
+        elif arr[r] % 2 == 0:
+            r -= 1
+        else:
+            arr[l], arr[r] = arr[r], arr[l]
+            l += 1
+            r -= 1
+    
+    odds = arr[:l]
+    evens = arr[l:]
+
+    evens.sort()
+    odds.sort(reverse = True)
+
+    return odds + evens

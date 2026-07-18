@@ -1760,6 +1760,9 @@ def sort_numbers_even_odd(arr):
     evens.sort()
     odds.sort(reverse = True)
 
-    return odds + evens
+    # return odds + evens
 
 print(sort_numbers_even_odd([9,4,5,0,7,8,6,3,2,1]))
+
+# Hashing Starts
+# 67. Two Sum

@@ -1761,3 +1761,5 @@ def sort_numbers_even_odd(arr):
     odds.sort(reverse = True)
 
     return odds + evens
+
+print(sort_numbers_even_odd([9,4,5,0,7,8,6,3,2,1]))

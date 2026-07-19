@@ -1766,3 +1766,11 @@ print(sort_numbers_even_odd([9,4,5,0,7,8,6,3,2,1]))
 
 # Hashing Starts
 # 67. Two Sum
+def two_sum(nums, target):
+    mp = {}
+    for i in range(len(nums)):
+        x = target - nums[i]
+        if x in mp:
+            return x, nums[i]
+        mp[nums[i]] = 1
+    return None

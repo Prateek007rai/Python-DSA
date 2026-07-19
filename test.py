@@ -1832,3 +1832,5 @@ def print_pairs_for_sum(arr, k):
             mp[num] = 1
         else:
             mp[num] += 1
+
+print_pairs_for_sum([2,3,4,5,4,5], 9)

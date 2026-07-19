@@ -1815,5 +1815,6 @@ def largest_cons_seq(arr):
                 curr = curr + 1
             longest = max(longest, length)
     return longest 
+print(largest_cons_seq([100,4,200,1,2,3]))
 
 # 70. Print All Pairs with given sum

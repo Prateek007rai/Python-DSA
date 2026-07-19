@@ -1834,3 +1834,6 @@ def print_pairs_for_sum(arr, k):
             mp[num] += 1
 
 print_pairs_for_sum([2,3,4,5,4,5], 9)
+
+# 71. Longest Subsequence
+# 72. Count Subarrays with X-OR = K

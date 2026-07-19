@@ -1775,3 +1775,22 @@ def two_sum(nums, target):
         mp[nums[i]] = i
     return None
 print(two_sum([2,3,4,5,6], 8))
+
+# 68. Subarrays with sum = k
+def subarray_sum_k(nums, k):
+    mp = {0:1}
+    prefix = 0
+    count = 0
+
+    for num in nums:
+        prefix = prefix + num
+
+        if (prefix - k) in mp:
+            count = count + mp[prefix-k]
+
+        if prefix in mp:
+            mp[prefix] = mp[prefix] + 1
+        else:
+            mp[prefix] = 1
+    return count
+

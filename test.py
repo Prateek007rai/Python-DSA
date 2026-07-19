@@ -1818,3 +1818,17 @@ def largest_cons_seq(arr):
 print(largest_cons_seq([100,4,200,1,2,3]))
 
 # 70. Print All Pairs with given sum
+def print_pairs_for_sum(arr, k):
+    mp = {}
+
+    for num in arr:
+        x = k-num
+        
+        if x in mp:
+            for i in range(mp[x]):
+                print(x, num)
+
+        if num not in mp:
+            mp[num] = 1
+        else:
+            mp[num] += 1

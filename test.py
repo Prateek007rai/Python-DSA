@@ -1794,3 +1794,4 @@ def subarray_sum_k(nums, k):
             mp[prefix] = 1
     return count
 
+print(subarray_sum_k([1,1,1], 2))

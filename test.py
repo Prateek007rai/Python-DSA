@@ -1795,3 +1795,25 @@ def subarray_sum_k(nums, k):
     return count
 
 print(subarray_sum_k([1,1,1], 2))
+
+# 69. Largest Consecutive Sequence
+def largest_cons_seq(arr):
+    longest = 0
+    s = set()
+
+    for num in arr:
+        s.add(num)
+    print("S: ", s)
+
+    for num in s:
+        if (num-1) not in s:
+            length = 1
+            curr = num
+
+            while (curr+1) in s:
+                length = length + 1
+                curr = curr + 1
+            longest = max(longest, length)
+    return longest 
+
+# 70. Print All Pairs with given sum

@@ -1856,3 +1856,19 @@ def longest_sub(nums):
 print(longest_sub([1,2,2,3,1,2]))
 
 # 72. Count Subarrays with X-OR = K
+def count_subarrays_xor(nums, k):
+    mp = {0:1}
+    xor = 0
+    count = 0
+
+    for num in nums:
+        xor = xor ^ num
+
+        if (xor ^ k) in mp:
+            count = count + mp[xor^k]
+        
+        if xor in mp:
+            mp[xor] += 1
+        else:
+            mp[xor] = 1
+    return count

@@ -1872,3 +1872,4 @@ def count_subarrays_xor(nums, k):
         else:
             mp[xor] = 1
     return count
+print(count_subarrays_xor([4,2,2,6,4], 6))

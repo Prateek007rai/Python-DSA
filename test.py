@@ -1840,19 +1840,19 @@ def longest_sub(nums):
     mp = {}
     for i in range(len(nums)):
         if nums[i] in mp:
-            mp[nums[i]] = 1
-        else:
             mp[nums[i]] += 1
+        else:
+            mp[nums[i]] = 1
     
     longest = 0
     for num in mp:
-        curr = mp[num]:
+        curr = mp[num]
         if (num+1) in mp:
             curr = curr + mp[num+1]
         
         longest = max(longest, curr)
     
     return longest
-
+print(longest_sub([1,2,2,3,1,2]))
 
 # 72. Count Subarrays with X-OR = K

@@ -1873,3 +1873,6 @@ def count_subarrays_xor(nums, k):
             mp[xor] = 1
     return count
 print(count_subarrays_xor([4,2,2,6,4], 6))
+
+# Stack, Queue and Deque Starts
+# 73. Infix to Postfix expressions

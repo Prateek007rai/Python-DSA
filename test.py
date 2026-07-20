@@ -1836,4 +1836,23 @@ def print_pairs_for_sum(arr, k):
 print_pairs_for_sum([2,3,4,5,4,5], 9)
 
 # 71. Longest Subsequence
+def longest_sub(nums):
+    mp = {}
+    for i in range(len(nums)):
+        if nums[i] in mp:
+            mp[nums[i]] = 1
+        else:
+            mp[nums[i]] += 1
+    
+    longest = 0
+    for num in mp:
+        curr = mp[num]:
+        if (num+1) in mp:
+            curr = curr + mp[num+1]
+        
+        longest = max(longest, curr)
+    
+    return longest
+
+
 # 72. Count Subarrays with X-OR = K

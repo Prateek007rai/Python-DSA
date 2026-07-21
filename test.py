@@ -1904,14 +1904,21 @@ def infix_to_postfix(s):
 
 print(infix_to_postfix("(A+B)*C"))
 
-# 74. Next Greater Element
+# 74. Next Greater Element on right
 def next_greater_ele(nums):
     stack = []
     res = [-1] * len(nums)
 
     for i in range(len(nums)-1, -1, -1):
         # check if number is greater than curr
+        while stack and stack[-1] <= nums[i]:
+            stack.pop()
+
         # assign value in res
+        if stack:
+            res[i] = nums[i]
+
         # push in stack
+        stack.append(nums[i])
     
     return res

@@ -1876,3 +1876,25 @@ print(count_subarrays_xor([4,2,2,6,4], 6))
 
 # Stack, Queue and Deque Starts
 # 73. Infix to Postfix expressions
+def infix_to_postfix(s):
+    res = ""
+    stack = []
+    prec={'(':0, '+':1, '-':1, '*':2, '/':2, '^': 3}
+
+    for ch in s:
+        if ch.isalnum():
+            res += ch
+        elif ch == '(':
+            stack.append(ch)
+        elif ch == ')':
+            while stack and stack[-1] != '(':
+                res = res + stack.pop()
+        else:
+            while stack and stack[-1] != '(' and prec[stack[-1]] > prec[ch]:
+                res = res + stack.pop()
+            stack.append(ch)
+    
+    while stack:
+        res = res + stack.pop()
+        
+    return res

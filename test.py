@@ -1905,3 +1905,13 @@ def infix_to_postfix(s):
 print(infix_to_postfix("(A+B)*C"))
 
 # 74. Next Greater Element
+def next_greater_ele(nums):
+    stack = []
+    res = [-1] * len(nums)
+
+    for i in range(len(nums)-1, -1, -1):
+        # check if number is greater than curr
+        # assign value in res
+        # push in stack
+    
+    return res

@@ -1916,9 +1916,11 @@ def next_greater_ele(nums):
 
         # assign value in res
         if stack:
-            res[i] = nums[i]
+            res[i] = stack[-1]
 
         # push in stack
         stack.append(nums[i])
     
     return res
+
+print(next_greater_ele([2,1,2,4,3]))

@@ -1903,3 +1903,5 @@ def infix_to_postfix(s):
     return res
 
 print(infix_to_postfix("(A+B)*C"))
+
+# 74. Next Greater Element

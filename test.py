@@ -1895,6 +1895,11 @@ def infix_to_postfix(s):
             stack.append(ch)
     
     while stack:
+        if stack[-1] == '(':
+            stack.pop()
+            continue
         res = res + stack.pop()
-        
+
     return res
+
+print(infix_to_postfix("(A+B)*C"))

@@ -1926,3 +1926,19 @@ def next_greater_ele(nums):
 print(next_greater_ele([2,1,2,4,3]))
 
 # 75. Largest Rectangle In Histogram
+def largest_rectangle(arr):
+    stack = []
+    max_area = 0
+    
+    for i in range(len(arr)+1):
+        height = 0 if i == len(arr) else arr[i]
+
+        while stack and height < arr[stack[-1]]:
+            height = arr[stack.pop()]
+            width = i if not stack else i - stack[-1] -1
+
+            max_area = max(max_area, height * width)
+        
+        stack.append(i)
+    return max_area
+        

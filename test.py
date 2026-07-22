@@ -1949,3 +1949,9 @@ print(largest_rectangle([2,1,5,6,2,3]))
 
 # 76. Delete middle of stack
 def delete_mid(stack, k):
+    if k == 1:
+        stack.pop()
+        return
+    temp = stack.pop()
+    delete_mid(stack, k-1)
+    stack.append(temp)

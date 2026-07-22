@@ -1924,3 +1924,5 @@ def next_greater_ele(nums):
     return res
 
 print(next_greater_ele([2,1,2,4,3]))
+
+# 75. Largest Rectangle In Histogram

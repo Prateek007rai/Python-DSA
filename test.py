@@ -1963,4 +1963,6 @@ def delete_middle_element(stack):
     delete_mid(stack, k)
     return stack
 
-
+stack = [10, 20, 30, 40, 50]
+delete_middle_element(stack)
+print(stack)

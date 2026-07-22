@@ -1953,5 +1953,14 @@ def delete_mid(stack, k):
         stack.pop()
         return
     temp = stack.pop()
-    delete_mid(stack, k-1)
+    delete_mid(stack, k - 1)
     stack.append(temp)
+
+def delete_middle_element(stack):
+    if not stack:
+        return stack
+    k = (len(stack) // 2) + 1
+    delete_mid(stack, k)
+    return stack
+
+

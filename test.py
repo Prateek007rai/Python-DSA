@@ -1991,7 +1991,7 @@ def nge_circular(nums):
     stack = []
 
     for i in range((2*n - 1), -1, -1):
-        while stack and stack[-1] < nums[i%n]:
+        while stack and stack[-1] <= nums[i%n]:
             stack.pop()
         
         if i<n and stack:
@@ -1999,5 +1999,6 @@ def nge_circular(nums):
         stack.append(nums[i%n])
 
     return res
+print(nge_circular([1,2,1]))
 
 # 79. Sum of max of subarrays

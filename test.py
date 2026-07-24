@@ -1985,5 +1985,7 @@ def longest_valid(s):
 print(longest_valid(")()()"))
 
 # 78. Next Greater Element in a circular array
+def nge_circular(nums):
+    
 
 # 79. Sum of max of subarrays

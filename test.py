@@ -1982,6 +1982,7 @@ def longest_valid(s):
             else:
                 res = max(res, i-stack[-1])
     return res
+print(longest_valid(")()()"))
 
 # 78. Next Greater Element in a circular array
 

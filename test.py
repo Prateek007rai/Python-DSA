@@ -1968,3 +1968,21 @@ delete_middle_element(stack)
 print(stack)
 
 # 77. Longest Valid Paranthesis
+def longest_valid(s):
+    stack = [-1]
+    res = 0
+
+    for i in range(len(s)):
+        if s[i] == '(':
+            stack.append(i)
+        else:
+            stack.pop()
+            if not stack:
+                stack.append(i)
+            else:
+                res = max(res, i-stack[-1])
+    return res
+
+# 78. Next Greater Element in a circular array
+
+# 79. Sum of max of subarrays

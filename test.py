@@ -2002,3 +2002,5 @@ def nge_circular(nums):
 print(nge_circular([1,2,1]))
 
 # 79. Sum of max of subarrays
+def sum_subarrays_sum(arr):
+

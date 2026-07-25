@@ -2003,4 +2003,16 @@ print(nge_circular([1,2,1]))
 
 # 79. Sum of max of subarrays
 def sum_subarrays_max(arr):
+    n = len(arr)
+    l, r, stack = [0]*n, [0]*n, []
+
+    for i in range(n):
+        while stack and arr[stack[-1]] < arr[i]:
+            stack.pop()
+        l[i] = i - stack[-1] if stack else i+1
+        stack.append(i)
+    
+    stack = []
+    for i in range(n):
+        
 

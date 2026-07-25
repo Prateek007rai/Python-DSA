@@ -2014,5 +2014,10 @@ def sum_subarrays_max(arr):
     
     stack = []
     for i in range(n):
-        
+        while stack and arr[stack[-1]] <= arr[i]:
+            stack.pop()
+        r[i] = stack[-1] - i if stack else n-i
+        stack.append(i)
+    
+    return sum(arr[i]*l[i]*r[i] for i in range(n))
 

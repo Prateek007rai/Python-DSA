@@ -2050,3 +2050,5 @@ def long_bounded(arr, limit):
     
     return max_len
 
+print(long_bounded([8,2,4,7], 4))
+

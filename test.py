@@ -2082,3 +2082,5 @@ def max_sliding_window(nums,k):
         if i >= k-1:
             res.append(nums[dq[0]])
     return res
+
+print(max_sliding_window([1,3,-1,3,5], 3))

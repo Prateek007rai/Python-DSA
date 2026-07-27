@@ -2032,4 +2032,21 @@ def long_bounded(arr, limit):
     left = max_len = 0
 
     for right in range(len(arr)):
-        
+        while max_dq and arr[max_dq[-1]] <= arr[right]:
+            max_dq.pop()
+        max_dq.append(right)
+
+        while min_dq and arr[min_dq[-1]] <= arr[right]:
+            min_dq.pop()
+        min_dq.append(right)
+
+        while arr[max_dq[0]] - arr[min_dq[0]] > limit:
+            left += 1
+            if max_dq[0] < left:
+                max_dq.popleft()
+            if min_dq[0] < left:
+                min_dq.popleft()
+        max_len = max(max_len, right-left+1)
+    
+    return max_len
+

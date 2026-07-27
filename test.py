@@ -2022,3 +2022,14 @@ def sum_subarrays_max(arr):
     return sum(arr[i]*l[i]*r[i] for i in range(n))
 
 print(sum_subarrays_max([1,3,2]))
+
+# 80. Longest Bounded Difference Subarray
+from collections import deque
+
+def long_bounded(arr, limit):
+    max_dq = deque()
+    min_dq = deque()
+    left = max_len = 0
+
+    for right in range(len(arr)):
+        

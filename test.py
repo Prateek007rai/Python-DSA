@@ -2068,4 +2068,17 @@ print("Final Longest Subarray Length:", long_bounded([8, 2, 4, 7], 4))
 # 81. K-size subarray maximum
 from collections import deque
 def max_sliding_window(nums,k):
-    
+    dq = deque()
+    res = []
+
+    for i in range(len(nums)):
+        while dq and dq[0] <= i-k:
+            dq.popleft()
+        
+        while dq and nums[dq[-1]] <= nums[i]:
+            dq.pop()
+
+        dq.append(i)
+        if i >= k-1:
+            res.append(nums[dq[0]])
+    return res

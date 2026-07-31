@@ -2087,3 +2087,11 @@ print(max_sliding_window([1,3,-1,3,5], 3))
 
 # Tree starts
 # 82. Maximum depth of binary tree
+def max_depth(root):
+    if not root:
+        return 0
+    
+    left = max_depth(root.left)
+    right = max_depth(root.right)
+
+    return 1 + max(left, right)

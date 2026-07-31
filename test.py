@@ -2096,6 +2096,7 @@ def max_depth(root):
 
     return 1 + max(left, right)
 
+# 83. Check for mirror tree
 def is_mirror(t1, t2):
     if not t1 and not t2:
         return True

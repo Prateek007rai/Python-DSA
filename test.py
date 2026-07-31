@@ -2095,3 +2095,5 @@ def max_depth(root):
     right = max_depth(root.right)
 
     return 1 + max(left, right)
+
+def is_mirror(t1, t2):

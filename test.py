@@ -2117,3 +2117,21 @@ def invert_tree(root):
 
 # 85. Binary tree/maximum path sum
 def max_path_sum(root):
+    max_path = float('-inf')
+
+    def dfs(root):
+        nonlocal max_path
+
+        if not root:
+            return 0
+        
+        left = max(0, dfs(root.left))
+        right = max(0, dfs(root.right))
+
+        current_sum = root.val + left + right
+        max_path = max(max_path, current_sum)
+
+        return root.val + max(left, right)
+    
+    dfs(root)
+    return max_path

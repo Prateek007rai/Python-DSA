@@ -2105,4 +2105,4 @@ def is_mirror(t1, t2):
     return (t1.val == t2.val and is_mirror(t1.left, t2.right) and is_mirror(t1.right, t2.left))
 
 # 84. Invert/flip binary tree
-def invert_tree(root):
+def invert_tree(root)

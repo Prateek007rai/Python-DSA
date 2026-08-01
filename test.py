@@ -2114,3 +2114,6 @@ def invert_tree(root):
     invert_tree(root.right)
 
     return root
+
+# 85. Binary tree/maximum path sum
+def max_path_sum(root):

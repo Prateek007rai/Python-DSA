@@ -2128,7 +2128,7 @@ def max_path_sum(root):
         left = max(0, dfs(root.left))
         right = max(0, dfs(root.right))
 
-        # current_sum = root.val + left + right
+        current_sum = root.val + left + right
         max_path = max(max_path, current_sum)
 
         return root.val + max(left, right)

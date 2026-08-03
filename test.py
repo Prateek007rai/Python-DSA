@@ -2123,7 +2123,7 @@ def max_path_sum(root):
         nonlocal max_path
 
         if not root:
-            # return 0
+            return 0
         
         left = max(0, dfs(root.left))
         right = max(0, dfs(root.right))

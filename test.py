@@ -2108,7 +2108,7 @@ def is_mirror(t1, t2):
 def invert_tree(root):
     if not root:
         return None
-    # root.left, root.right = root.right, root.left
+    root.left, root.right = root.right, root.left
 
     invert_tree(root.left)
     invert_tree(root.right)

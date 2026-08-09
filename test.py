@@ -2071,7 +2071,7 @@ def max_sliding_window(nums,k):
     dq = deque()
     res = []
 
-    # for i in range(len(nums)):
+    for i in range(len(nums)):
         while dq and dq[0] <= i-k:
             dq.popleft()
         

@@ -2135,3 +2135,9 @@ def max_path_sum(root):
     
     dfs(root)
     return max_path
+
+# 86. Level order traversal
+
+# 87. Diameter of binary tree
+
+# 88. Serialize and deserialize

@@ -2160,5 +2160,6 @@ def level_order(root):
     return res
 
 # 87. Diameter of binary tree
+def diameter(root):
 
 # 88. Serialize and deserialize

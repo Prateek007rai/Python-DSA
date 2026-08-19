@@ -2137,6 +2137,9 @@ def max_path_sum(root):
     return max_path
 
 # 86. Level order traversal
+from collections import deque
+def level_order(root):
+    
 
 # 87. Diameter of binary tree
 

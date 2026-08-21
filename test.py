@@ -2166,7 +2166,7 @@ def diameter(root):
         nonlocal max_dia
 
         if not node:
-            # return 0
+            return 0
 
         left = dfs(node.left)
         right = dfs(node.right)

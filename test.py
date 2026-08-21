@@ -2156,7 +2156,7 @@ def level_order(root):
                 q.append(node.left)
             if node.right:
                 q.append(node.right)
-        res.append(level)
+        # res.append(level)
     return res
 
 # 87. Diameter of binary tree

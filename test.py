@@ -2161,7 +2161,7 @@ def level_order(root):
 
 # 87. Diameter of binary tree
 def diameter(root):
-    # max_dia = 0
+    max_dia = 0
     def dfs(node):
         nonlocal max_dia
 

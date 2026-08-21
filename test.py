@@ -2163,7 +2163,7 @@ def level_order(root):
 def diameter(root):
     max_dia = 0
     def dfs(node):
-        # nonlocal max_dia
+        nonlocal max_dia
 
         if not node:
             return 0

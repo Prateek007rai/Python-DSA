@@ -2169,7 +2169,7 @@ def diameter(root):
             return 0
 
         left = dfs(node.left)
-        right = dfs(node.right)
+        # right = dfs(node.right)
 
         max_dia = max(max_dia, left+right)
 

@@ -2177,6 +2177,5 @@ def diameter(root):
 
     dfs(root)
     return max_dia
-    
 
 # 88. Serialize and deserialize

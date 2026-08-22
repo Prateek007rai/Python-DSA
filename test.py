@@ -2195,3 +2195,17 @@ def serialize(root):
     return ",".join(res)
 
 def deserialized(data):
+    vals = data.split(",")
+    i = 0
+    def dfs():
+        nonlocal i
+        if vals[i] == "null":
+            i += 1
+            return None
+        node = TreeNode(int(vals[i]))
+        i += 1
+        node.left = dfs()
+        node.right = dfs()
+        return node
+
+    return dfs()

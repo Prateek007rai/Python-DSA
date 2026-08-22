@@ -2193,3 +2193,5 @@ def serialize(root):
 
     dfs(root)
     return ",".join(res)
+
+def deserialized(data):

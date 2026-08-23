@@ -485,6 +485,9 @@ def find_num(arr):
 print(find_num([34,45,53,21,24,64,54]))
 
 
+# String compression
+
+
 # START A NEW DAY WITH A NEW THOUGHT
 
 # 1. find pair of sum

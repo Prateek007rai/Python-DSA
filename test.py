@@ -469,6 +469,10 @@ def is_valid_paranthesis_1(s):
 
 print("Check is valid paranthesis: ", is_valid_paranthesis_1("()[]{}"))
 
+# Practice
+# 2nd highest number in array 
+
+
 
 # START A NEW DAY WITH A NEW THOUGHT
 
@@ -2209,3 +2213,5 @@ def deserialized(data):
         return node
 
     return dfs()
+
+# 89. 
